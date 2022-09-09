@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matricula</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <div class="containerButtonShow">
+        <img id="showButton" class="buttonShow" src="../../../assets/showIcon.jfif"></button>
+    </div>
+    <section class="containerPrincipal">
+        
+        <div class="containerStart">
+            <div class="logo">
+                <img src="../../../assets/logo_projeto.jpg" class="imageLogo"/>
+            </div>
+            <div class="options">
+                <img src="../../../assets/icon-registration.png" class="iconOptions"/>
+                <div for="client" class="registerStyle" >Cadastros</div> 
+                <img src="../../../assets/icon_show.png" id="register">
+            </div>
+            <div class="optionsRegister">
+                <div>
+                    <a href="../register/index.html">Usuários</a>
+                </div>
+                <div>
+                    <a href="./index.html">Matrícula</a>
+                </div>
+                <div>
+                     <a href="">Fornecedores</a>
+                </div>
+            </div>
+            <div class="options">
+                <img src="../../../assets/icon-sell.png" class="iconOptions"/>
+                <a href="../../plans/index.html" for="client">Planos</a>
+            </div>
+            <div class="options">
+                <img src="../../../assets/icon-financial.png" class="iconOptions"/>
+                <a href="" for="client">Financeiro</a>
+            </div>
+            <div class="options">
+                <img src="../../../assets/icon-administration.png" class="iconOptions"/>
+                <a href="" for="client">Administrativo</a>
+            </div>
+            <div class="options">
+                <img src="../../../assets/icon-client.png" class="iconOptions"/>
+                <a href="../../login/login.html" for="client">Área do Cliente</a>
+            </div>
+            
+        </div>
+        <div class="registration">
+            <form action="formRegistration" class="formRegister">
+                <h1>Matricula Action Fitness</h1>
+
+                <div class="containerNameEmail">
+                    <div class="containerInput">
+                        <label for="name">Nome:</label>
+                        <input type="text" placeholder="Digite se nome completo"/>
+                    </div>
+                    <div class="containerInput">
+                        <label for="Email">Email:</label>
+                        <input type="text" placeholder="Digite seu Email"/>
+                    </div>
+                </div>
+                
+
+                <div class="containerCPFplan">
+                    <div class="containerCPF">
+                        <label for="CPF">CPF:</label>
+                        <input type="text" placeholder="Digite seu CPF"/>
+                    </div>
+                    <div class="containerPlan">
+                        <label for="Plan">Plano:</label>
+                        <select name="plans" id="plan">
+                            <option>PLANO TESTE 1</option>
+                            <option>PLANO TESTE 2</option>
+                            <option>PLANO TESTE 2</option>
+                            <option>PLANO TESTE 2</option>
+                            <option>PLANO TESTE 2</option>
+                            <option>PLANO TESTE 2</option>
+                        </select>
+                        
+                    </div>
+                </div>
+
+
+                <div class="ContainerStreetNumber">
+                    <div class="containerInput">
+                        <label for="Street">Rua/Avenida</label>
+                        <input type="text" placeholder="Endereço"/>
+                    </div>
+                    <div class="containerInput">
+                        <label for="number">Número:</label>
+                        <input type="text" placeholder="Número Residência"/>
+                    </div>    
+                </div>
+                <div class="containerInput">
+                    <label for="CEP">CEP:</label>
+                    <input type="text" placeholder="Código Postal"/>
+                </div> 
+                <div class="containerButton">
+                    <button class="buttonRegister" type="button">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+        
+    </section>
+    
+    
+</body>
+    <script src="index.js"></script>
+</html>

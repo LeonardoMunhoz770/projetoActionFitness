@@ -1,0 +1,161 @@
+html{
+    height: 100%;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #FAF8ED;
+}
+.logo{
+    height: 100%;
+    max-width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+
+.imageLogo{
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+}
+
+.containerPrincipal{
+    margin: 0 auto;
+    max-width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    display: flex;
+    gap: 50px;
+    border-radius: 20px;
+    flex-direction: row;
+    height: 100%;
+}
+
+.options{
+    height: 50px;
+    width: 200px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 20px;
+    background: rgb(250,217,97);
+    background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.iconOptions{
+    height: 30px;
+    width: 30px;
+    padding: 2px;
+}
+
+.containerPrincipal .options:hover{
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+}
+
+.containerStart{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 1em gray;
+}
+
+a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    padding-left: 5px;
+}
+
+.formPlans{
+    margin: 0 auto;
+    height: 500px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 1em gray;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+.containerForm{
+    width: 100%;
+    justify-content: center;
+    padding: 20px;
+}
+
+.containerPlans{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerPlans .plan:hover{
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    cursor: pointer;
+}
+
+.plan{
+    width: 20%;
+    height: 300px;
+    background: rgb(250,217,97);
+    background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.buttonShow{
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 35px;
+}
+
+.containerButtonShow{
+    padding: 10px;
+}
+
+.optionsRegister{
+    display: none;
+}
+
+.optionsRegister{
+    background: rgb(250,217,97);
+    background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.optionsRegister a{
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+
+.optionsRegister a:hover{
+    background-color: yellow;
+}
