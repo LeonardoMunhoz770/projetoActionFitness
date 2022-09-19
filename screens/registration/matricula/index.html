@@ -19,18 +19,18 @@
             </div>
             <div class="options">
                 <img src="../../../assets/icon-registration.png" class="iconOptions"/>
-                <div for="client" class="registerStyle" >Cadastros</div> 
+                <div for="client" class="registerStyle" >Cliente</div> 
                 <img src="../../../assets/icon_show.png" id="register">
             </div>
             <div class="optionsRegister">
                 <div>
-                    <a href="../register/index.html">Usuários</a>
+                    <a href="">Localizar/Aluno</a>
                 </div>
                 <div>
-                    <a href="./index.html">Matrícula</a>
+                    <a href="./index.html">Agendamento</a>
                 </div>
                 <div>
-                     <a href="">Fornecedores</a>
+                     <a href="">Pagamento</a>
                 </div>
             </div>
             <div class="options">
@@ -52,58 +52,58 @@
             
         </div>
         <div class="registration">
-            <form action="formRegistration" class="formRegister">
-                <h1>Matricula Action Fitness</h1>
-
-                <div class="containerNameEmail">
-                    <div class="containerInput">
-                        <label for="name">Nome:</label>
-                        <input type="text" placeholder="Digite se nome completo"/>
+            <form action="" class="formRegister">
+                <div class="container">
+                    <div class="plano_assinatura">
+                        <div class='planos'>
+                            <h3>Escolha o Plano</h3>
+                            <select id="tipo_plano">
+                                <option id="basico">Plano Básico</option>
+                                <option id="completo">Plano Completo</option>
+                                <option id="familiar_basico">Plano Familiar - Básico</option>
+                                <option id="familiar_completo">Plano Familiar - Completo</option>
+                                <option id="especializado">Plano Especializado</option>
+                            </select>
+                            <a href="planos aqui">Ver planos</a>
+                        </div>
+                        <div class="assinatura">
+                            <h3>Vigencia da Assinatura</h3>
+                            <select id="vigencia">
+                                <option id="mensal">Mensal</option>
+                                <option id="trimestral">Trimestral - 15%</option>
+                                <option id="semestral">Semestral - 20%</option>
+                                <option id="anual">Anual - 30%</option>
+                                <option id="desconto">Desconto por parceria - 10%</option>
+                            </select>
+                        </div>
+                        <div class="data">
+                            <h3>Selecione a data de vencimento mensal</h3>
+                            <input type="date" id="vencimento">
+                            <p>Datas disponíveis: 05, 10, 15 e 20</p>
+                        </div>
                     </div>
-                    <div class="containerInput">
-                        <label for="Email">Email:</label>
-                        <input type="text" placeholder="Digite seu Email"/>
+                    
+                    <div class="dados_cadastrais">
+                        <h3>Dados Cadastrais</h3>
+                        <input type="text" id="nome_completo" placeholder="Nome Completo">
+                        <input type="text" id="cpf" placeholder="Digite seu CPF">
+                        <input type="date" placeholder="Data de Nascimeonto" id="nasc"/> 
+                        <select>
+                            <option>Masculino</option>
+                            <option>Feminino</option>
+                        </select>
+                        <input type="tel" placeholder="Telefone" id="telefone"/>
+                        <input type="text" placeholder="CEP" id="cep">
+                        <input type="text" placeholder="Endereço" id="endereco"/>
+                        <input type="text" placeholder="Numero" id="numero"/>
+                        <input type="text" placeholder="Bairro" id="bairro"/>
                     </div>
+                </div>
+                <div class="buttons">
+                    <button>Imprimir</button>
+                    <button>Finalizar Cadastro</button>
                 </div>
                 
-
-                <div class="containerCPFplan">
-                    <div class="containerCPF">
-                        <label for="CPF">CPF:</label>
-                        <input type="text" placeholder="Digite seu CPF"/>
-                    </div>
-                    <div class="containerPlan">
-                        <label for="Plan">Plano:</label>
-                        <select name="plans" id="plan">
-                            <option>PLANO TESTE 1</option>
-                            <option>PLANO TESTE 2</option>
-                            <option>PLANO TESTE 2</option>
-                            <option>PLANO TESTE 2</option>
-                            <option>PLANO TESTE 2</option>
-                            <option>PLANO TESTE 2</option>
-                        </select>
-                        
-                    </div>
-                </div>
-
-
-                <div class="ContainerStreetNumber">
-                    <div class="containerInput">
-                        <label for="Street">Rua/Avenida</label>
-                        <input type="text" placeholder="Endereço"/>
-                    </div>
-                    <div class="containerInput">
-                        <label for="number">Número:</label>
-                        <input type="text" placeholder="Número Residência"/>
-                    </div>    
-                </div>
-                <div class="containerInput">
-                    <label for="CEP">CEP:</label>
-                    <input type="text" placeholder="Código Postal"/>
-                </div> 
-                <div class="containerButton">
-                    <button class="buttonRegister" type="button">Cadastrar</button>
-                </div>
             </form>
         </div>
         

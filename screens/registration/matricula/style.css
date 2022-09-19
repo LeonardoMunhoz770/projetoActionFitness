@@ -76,11 +76,12 @@ a{
     width: 100%;
     justify-content: center;
     padding: 20px;
+    
 }
 
 .formRegister{
     margin: 0 auto;
-    height: 500px;
+    height: 100%;
     max-width: 80%;
     background-color: white;
     border-radius: 20px;
@@ -90,84 +91,11 @@ a{
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-
-.formRegister label{
-    font-weight: bold;
-}
-
-input{
-    width: 100%;
-    border: transparent;
-    outline: transparent;
-}
-
-
-h1{
-    font-size: 20px;
-    font-weight: bold;
-}
-.containerInput{
-    background-color: white;
-    width: 50%;
-    height: 37px;
-    margin: 0 auto;
-    align-items: center;
-    display: flex;
-    border-bottom: 2px solid black;
-    display: block;
-}
-
-.containerCPFplan{
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-.containerCPF{
-    width: 50%;
-}
-
-.containerPlan{
-    width: 50%;
-}
-
-.containerCPF input{
-    border-bottom: 2px solid black;
-}
-
-.containerNameEmail{
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-.ContainerStreetNumber{
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-.containerButton{
-    width: 50%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    
-}
-
-.buttonRegister{
-    width: 100%;
-    height: 40px;
+    border: 1px solid black;
     background: rgb(250,217,97);
     background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
 }
+
 
 .buttonShow{
     border: none;
@@ -186,8 +114,7 @@ h1{
 
 .optionsRegister{
     background: rgb(250,217,97);
-    background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);
-    width: 50%;
+    width: 80%;
     text-align: center;
     border-radius: 10px;
     padding: 10px;
@@ -209,4 +136,100 @@ h1{
     font-weight: bold;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: black;
+}
+
+
+.container{
+    width: 80%;
+    display: block;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.plano_assinatura{
+    background-color: white;
+    border-radius: 24px;
+    margin-bottom: 20px;
+}
+
+.planos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    margin-top: 5px;
+    
+}
+
+.planos a{
+    font-size: 14px;
+    color: red;
+}
+
+.planos select{
+    width: 50%;
+}
+
+.assinatura{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+}
+
+.assinatura select{
+    width: 50%;
+}
+
+.data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    margin-top: 5px;
+}
+
+
+.data input{
+    width: 50%;
+}
+
+.dados_cadastrais{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.dados_cadastrais input{
+    width: 50%;
+    height: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 0.1px solid black;
+}
+
+.dados_cadastrais select{
+    width: 50%;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+    padding: 10px;
+}
+
+.buttons button{
+    font-weight: bold;
+    font-size: large;
+    cursor: pointer;
+    background-color: white;
 }
