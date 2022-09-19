@@ -32,61 +32,82 @@ document.querySelector('#btn').addEventListener("click", function(){
 
     let select = document.querySelector("#tipo_plano"); 
     let plano = select.options[select.selectedIndex].text;
-    document.querySelector('#tipo_de_plano').innerHTML += plano
     dados['plan'] = plano;
 
     let selectMatricula = document.querySelector('#vigencia');
     let vigencia = selectMatricula.options[select.selectedIndex].text;
-    document.querySelector('#vigencia_assinatura').innerHTML += vigencia
     dados['vigencia'] = vigencia;
 
 
     let data = document.querySelector("#vencimento").value;
     dados['data'] = data;
-    document.querySelector('#data_vencimento').innerHTML += data
 
     let cpf = document.querySelector('#cpf').value;
     dados['cpf'] = cpf;
-    document.querySelector('#cpf_completo').innerHTML += cpf
     
     
     
     let nome = document.querySelector('#nome_completo').value;
     dados['nome'] = nome
-    document.querySelector('#name_completo').innerHTML += nome
 
     let nasc = document.querySelector('#nasc').value;
     dados['nasc'] = nasc
-    document.querySelector('#nascimento_completo').innerHTML += nasc
 
     let telefone = document.querySelector('#telefone').value;
     dados['telefone'] = telefone
-    document.querySelector('#tel').innerHTML += telefone
 
     let selectGenero = document.querySelector('#genero');
     let genero = selectGenero.options[selectGenero.selectedIndex].text;
     dados['genero'] = genero;
-    document.querySelector('#genero_').innerHTML += genero
 
 
     let cep = document.querySelector('#cep').value;
     dados['cep'] = cep
-    document.querySelector('#cep').innerHTML += cep
 
 
     let endereco = document.querySelector('#endereco').value;
     dados['endereco'] = endereco
-    document.querySelector('#ender').innerHTML += endereco
 
 
     let numero = document.querySelector('#numero').value;
     dados['numero'] = numero
-    document.querySelector('#num').innerHTML += numero
 
 
     let bairro = document.querySelector('#bairro').value;
     dados['bairro'] = bairro
-    document.querySelector('#bairro').innerHTML += bairro
+
+    document.querySelector('#dados').innerHTML += `
+        <div >
+            <h1>Informações de mátricula de ${dados.nome}</h1>
+            <div>
+                <h3>Dados de matrícula</h1>
+                <label>Nome: ${dados.nome}</label><br>
+                <label>CPF: ${dados.cpf}</label><br>
+                <label>Gênero: ${dados.genero}</label><br>
+                <label>Telefone: ${dados.telefone}</label><br>
+                <label>Data de Nascimento: ${dados.nasc}</label>
+            </div>
+            <div>
+                <h3>Dados do Plano</h3>
+                <label>Nome: ${dados.plan}</label><br>
+                <label>Vigência: ${dados.vigencia}</label><br>
+                <label>Vencimento: ${dados.data}</label>
+            </div>
+            <div>
+                <h3>Dados de Endereço</h3>
+                <label>Endereço: ${dados.endereco}</label><br>
+                <label>Número: ${dados.numero}</label><br>
+                <label>Bairro: ${dados.bairro}</label><br>
+                <label>CEP: ${dados.cep}</label><br>
+            </div>
+
+            <u>
+                Action Fitness
+            </u>
+        </div>
+    `
+
+
 
     console.log(dados)
 })
@@ -94,7 +115,7 @@ document.querySelector('#btn').addEventListener("click", function(){
 
 
 function imprimirDados() {
-    let conteudo = document.getElementById('dados').innerHTML;
+    let conteudo = document.querySelector('#dados').innerHTML;
    tela_impressao = window.open('about:blank');
    tela_impressao.document.write(conteudo);
    tela_impressao.window.print();
