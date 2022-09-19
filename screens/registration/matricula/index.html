@@ -52,28 +52,28 @@
             
         </div>
         <div class="registration">
-            <form action="" class="formRegister">
+            <form action="" class="formRegister" id="formRegister">
                 <div class="container">
                     <div class="plano_assinatura">
                         <div class='planos'>
                             <h3>Escolha o Plano</h3>
                             <select id="tipo_plano">
-                                <option id="basico">Plano Básico</option>
-                                <option id="completo">Plano Completo</option>
-                                <option id="familiar_basico">Plano Familiar - Básico</option>
-                                <option id="familiar_completo">Plano Familiar - Completo</option>
-                                <option id="especializado">Plano Especializado</option>
+                                <option id="basico" value="planobasico">Plano Básico</option>
+                                <option id="completo" value="completo">Plano Completo</option>
+                                <option id="familiar_basico" value="planofamiliar">Plano Familiar - Básico</option>
+                                <option id="familiar_completo" value="planofamiliar">Plano Familiar - Completo</option>
+                                <option id="especializado" value="planoespecializado">Plano Especializado</option>
                             </select>
-                            <a href="planos aqui">Ver planos</a>
+                            <a href="../../plans/index.html">Ver planos</a>
                         </div>
                         <div class="assinatura">
                             <h3>Vigencia da Assinatura</h3>
                             <select id="vigencia">
-                                <option id="mensal">Mensal</option>
-                                <option id="trimestral">Trimestral - 15%</option>
-                                <option id="semestral">Semestral - 20%</option>
-                                <option id="anual">Anual - 30%</option>
-                                <option id="desconto">Desconto por parceria - 10%</option>
+                                <option id="mensal" value="mensal">Mensal</option>
+                                <option id="trimestral" value="trimestral">Trimestral - 15%</option>
+                                <option id="semestral" value="semestral">Semestral - 20%</option>
+                                <option id="anual" value="anual">Anual - 30%</option>
+                                <option id="desconto" value="desconto">Desconto por parceria - 10%</option>
                             </select>
                         </div>
                         <div class="data">
@@ -88,7 +88,7 @@
                         <input type="text" id="nome_completo" placeholder="Nome Completo">
                         <input type="text" id="cpf" placeholder="Digite seu CPF">
                         <input type="date" placeholder="Data de Nascimeonto" id="nasc"/> 
-                        <select>
+                        <select id="genero">
                             <option>Masculino</option>
                             <option>Feminino</option>
                         </select>
@@ -100,15 +100,27 @@
                     </div>
                 </div>
                 <div class="buttons">
-                    <button>Imprimir</button>
-                    <button>Finalizar Cadastro</button>
+                    <button type="button" id="btnprint" onclick="imprimirDados()">Imprimir</button>
+                    <button type="button" id="btn">Finalizar Cadastro</button>
                 </div>
-                
             </form>
         </div>
         
     </section>
-    
+    <div class="dados" id="dados">
+        <div id="tipo_de_plano">Tipo de Plano: </div>
+        <div id="vigencia_assinatura">Vigencia da Assinatura: </div>
+        <div id="data_vencimento">Data de Vencimento da Fatura</div>
+        <div id="name_completo">Nome Completo</div>
+        <div id="cpf_completo">CPF: </div>
+        <div id="nascimento_completo">Data de Nascimento: </div>
+        <div id="genero_">Gênero: </div>
+        <div id="tel">Telefone: </div>
+        <div id="cep">CEP: </div>
+        <div id="ender">Endereço: </div>
+        <div id="num">Número: </div>
+        <div id="bairro">Bairro: </div>
+    </div>
     
 </body>
     <script src="index.js"></script>
