@@ -33,46 +33,28 @@ document.querySelector('#btn').addEventListener("click", function(){
     let select = document.querySelector("#tipo_plano"); 
     let plano = select.options[select.selectedIndex].text;
     dados['plan'] = plano;
-
     let selectMatricula = document.querySelector('#vigencia');
     let vigencia = selectMatricula.options[select.selectedIndex].text;
     dados['vigencia'] = vigencia;
-
-
     let data = document.querySelector("#vencimento").value;
     dados['data'] = data;
-
     let cpf = document.querySelector('#cpf').value;
     dados['cpf'] = cpf;
-    
-    
-    
     let nome = document.querySelector('#nome_completo').value;
     dados['nome'] = nome
-
     let nasc = document.querySelector('#nasc').value;
     dados['nasc'] = nasc
-
     let telefone = document.querySelector('#telefone').value;
     dados['telefone'] = telefone
-
     let selectGenero = document.querySelector('#genero');
     let genero = selectGenero.options[selectGenero.selectedIndex].text;
     dados['genero'] = genero;
-
-
     let cep = document.querySelector('#cep').value;
     dados['cep'] = cep
-
-
     let endereco = document.querySelector('#endereco').value;
     dados['endereco'] = endereco
-
-
     let numero = document.querySelector('#numero').value;
     dados['numero'] = numero
-
-
     let bairro = document.querySelector('#bairro').value;
     dados['bairro'] = bairro
 
@@ -106,18 +88,66 @@ document.querySelector('#btn').addEventListener("click", function(){
             </u>
         </div>
     `
-
-
-
-    console.log(dados)
+    alert("Dados registrados com sucesso!")
 })
 
 
 
 function imprimirDados() {
     let conteudo = document.querySelector('#dados').innerHTML;
-   tela_impressao = window.open('about:blank');
+   tela_impressao = window.open('Contrato Action Fitness');
    tela_impressao.document.write(conteudo);
    tela_impressao.window.print();
    tela_impressao.window.close();
+   document.querySelector("#dados").remove()
+   window.location.reload()
 }
+
+const inputCpf = document.querySelector("#cpf")
+
+
+inputCpf.addEventListener('keypress', function(){
+    let inputLength = inputCpf.value.length
+    if(inputLength === 3 || inputLength === 7){
+        inputCpf.value += '.'
+    }else if(inputLength === 11){
+        inputCpf.value += '-'
+    }
+})
+
+function mascara(o,f){
+    v_obj=o
+    v_fun=f
+    setTimeout("execmascara()",1)
+}
+function execmascara(){
+    v_obj.value=v_fun(v_obj.value)
+}
+function mtel(v){
+    v=v.replace(/\D/g,""); 
+    v=v.replace(/^(\d{2})(\d)/g,"($1) $2");
+    v=v.replace(/(\d)(\d{4})$/,"$1-$2");
+    return v;
+}
+function id( el ){
+	return document.getElementById( el );
+}
+window.onload = function(){
+	id('telefone').onkeyup = function(){
+		mascara( this, mtel );
+	}
+}
+
+
+document.querySelector("#cep").addEventListener('blur', e=>{
+    const codigopostal = document.querySelector("#cep").value;
+    const url = `https://viacep.com.br/ws/${codigopostal}/json/`;
+    fetch(url)
+    .then(response => response.json())
+    .then(json =>{
+       if(json.logradouro){
+           document.querySelector("#endereco").value = json.logradouro;
+           document.querySelector("#bairro").value = json.bairro;
+       }
+    })
+})

@@ -18,12 +18,12 @@
             </div>
             <div class="options">
                 <img src="../../../assets/icon-registration.png" class="iconOptions"/>
-                <div for="client" class="registerStyle" >Cliente</div> 
+                <div for="client" class="registerStyle" >Matricula</div> 
                 <img src="../../../assets/icon_show.png" id="register">
             </div>
             <div class="optionsRegister">
                 <div>
-                    <a href="">Localizar/Aluno</a>
+                    <a href="../localizar_aluno/index.html">Localizar/Aluno</a>
                 </div>
                 <div>
                     <a href="./index.html">Agendamento</a>
@@ -52,10 +52,11 @@
         </div>
         <div class="registration">
             <form action="" class="formRegister" id="formRegister">
+                <h1>Matricula</h1>
                 <div class="container">
                     <div class="plano_assinatura">
                         <div class='planos'>
-                            <h3>Escolha o Plano</h3>
+                            <label>Escolha o Plano: </label>
                             <select id="tipo_plano">
                                 <option id="basico" value="planobasico">Plano Básico</option>
                                 <option id="completo" value="completo">Plano Completo</option>
@@ -66,7 +67,7 @@
                             <a href="../../plans/index.html">Ver planos</a>
                         </div>
                         <div class="assinatura">
-                            <h3>Vigencia da Assinatura</h3>
+                            <label>Vigencia da Assinatura: </label>
                             <select id="vigencia">
                                 <option id="mensal" value="mensal">Mensal</option>
                                 <option id="trimestral" value="trimestral">Trimestral - 15%</option>
@@ -76,26 +77,24 @@
                             </select>
                         </div>
                         <div class="data">
-                            <h3>Selecione a data de vencimento mensal</h3>
+                            <label>Selecione a data de vencimento mensal: </label>
                             <input type="date" id="vencimento">
-                            <p>Datas disponíveis: 05, 10, 15 e 20</p>
                         </div>
                     </div>
                     
                     <div class="dados_cadastrais">
-                        <h3>Dados Cadastrais</h3>
                         <input type="text" id="nome_completo" placeholder="Nome Completo">
-                        <input type="text" id="cpf" placeholder="Digite seu CPF">
-                        <input type="date" placeholder="Data de Nascimeonto" id="nasc"/> 
+                        <input type="text" id="cpf" placeholder="Digite seu CPF" maxlength="14" autocomplete="off">
+                        <input type="date" id="nasc" /> 
+                        <input type="tel" placeholder="Telefone" id="telefone" maxlength="15"/>
+                        <input type="text" placeholder="CEP" id="cep" maxlength="8">
+                        <input type="text" placeholder="Endereço" id="endereco"/>
+                        <input type="text" placeholder="Numero" id="numero"/>
+                        <input type="text" placeholder="Bairro" id="bairro"/>
                         <select id="genero">
                             <option>Masculino</option>
                             <option>Feminino</option>
                         </select>
-                        <input type="tel" placeholder="Telefone" id="telefone"/>
-                        <input type="text" placeholder="CEP" id="cep">
-                        <input type="text" placeholder="Endereço" id="endereco"/>
-                        <input type="text" placeholder="Numero" id="numero"/>
-                        <input type="text" placeholder="Bairro" id="bairro"/>
                     </div>
                 </div>
                 <div class="buttons">
