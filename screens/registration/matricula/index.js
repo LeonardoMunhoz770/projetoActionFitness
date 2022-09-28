@@ -29,6 +29,7 @@ let dados = [
 ]
 
 document.querySelector('#btn').addEventListener("click", function(){
+    
 
     let select = document.querySelector("#tipo_plano"); 
     let plano = select.options[select.selectedIndex].text;
@@ -57,6 +58,8 @@ document.querySelector('#btn').addEventListener("click", function(){
     dados['numero'] = numero
     let bairro = document.querySelector('#bairro').value;
     dados['bairro'] = bairro
+
+    console.log(dados)
 
     if(nome.length == 0 || cpf.length ==0 || telefone.length == 0 || endereco.length == 0 || numero.length == 0 || bairro.length == 0){
         alert("Preencha todos os campos")
@@ -94,6 +97,19 @@ document.querySelector('#btn').addEventListener("click", function(){
     alert("Dados registrados com sucesso!")
     }
 
+
+    fetch('http://192.168.0.109:3000/controller/matriculaTeste',{
+        method: 'POST',
+        body: JSON.stringify(dados)
+    })
+    .then(res =>{
+        console.log("DADOS ENVIADOS", res)
+    })
+    .catch(res =>{
+        console.log("ERRO:", res)
+    })
+
+    
     
 })
 
