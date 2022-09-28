@@ -58,7 +58,10 @@ document.querySelector('#btn').addEventListener("click", function(){
     let bairro = document.querySelector('#bairro').value;
     dados['bairro'] = bairro
 
-    document.querySelector('#dados').innerHTML += `
+    if(nome.length == 0 || cpf.length ==0 || telefone.length == 0 || endereco.length == 0 || numero.length == 0 || bairro.length == 0){
+        alert("Preencha todos os campos")
+    }else{
+        document.querySelector('#dados').innerHTML += `
         <div >
             <h1>Informações de mátricula de ${dados.nome}</h1>
             <div>
@@ -89,6 +92,9 @@ document.querySelector('#btn').addEventListener("click", function(){
         </div>
     `
     alert("Dados registrados com sucesso!")
+    }
+
+    
 })
 
 

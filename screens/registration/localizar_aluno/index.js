@@ -13,29 +13,34 @@ document.querySelector("#showButton").addEventListener("click", function(){
 
 
 function pesquisarAluno(){
-    document.querySelector("#containerBusca").innerHTML += `
+    cpf = document.querySelector("#cpf").value;
+
+    if(cpf.length == 0){
+        alert('Preencha o campo CPF')
+    }else{
+        document.querySelector("#containerBusca").innerHTML += `
     <div class="formatacaoMatricula">
                 
                 <div class="dadosMatricula">
                     <h3>Dados de matrícula</h1>
-                    <label>Nome: </label>
-                    <label>CPF: </label>
-                    <label>Gênero: </label>
-                    <label>Telefone: </label>
-                    <label>Data de Nascimento: </label>
+                    <label contenteditable="true" id="nome"> TESTE </label>
+                    <label>CPF: TESTE</label>
+                    <label>Gênero: TESTE</label>
+                    <label>Telefone: TESTE</label>
+                    <label>Data de Nascimento: TESTE</label>
                 </div>
                 <div class="dadosPlano">
                     <h3>Dados do Plano</h3>
-                    <label>Nome: </label>
-                    <label>Vigência: </label>
-                    <label>Vencimento: </label>
+                    <label>Nome: TESTE</label>
+                    <label>Vigência: TESTE</label>
+                    <label>Vencimento: TESTE</label>
                 </div>
                 <div class="dadosEndereco">
                     <h3>Dados de Endereço</h3>
-                    <label>Endereço: </label>
-                    <label>Número: </label>
-                    <label>Bairro: </label>
-                    <label>CEP: </label>
+                    <label>Endereço: TESTE</label>
+                    <label>Número: TESTE</label>
+                    <label>Bairro: TESTE</label>
+                    <label>CEP: TESTE</label>
                 </div>
 
                 <u>
@@ -43,4 +48,24 @@ function pesquisarAluno(){
                 </u>
     </div>
     `
+    }
+    
+}
+
+const inputCpf = document.querySelector("#cpf")
+
+
+inputCpf.addEventListener('keypress', function(){
+    let inputLength = inputCpf.value.length
+    if(inputLength === 3 || inputLength === 7){
+        inputCpf.value += '.'
+    }else if(inputLength === 11){
+        inputCpf.value += '-'
+    }
+})
+
+
+function enviarDados(){
+    campo_nome = document.getElementById("nome").textContent;
+    console.log(campo_nome)
 }
