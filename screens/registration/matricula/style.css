@@ -284,4 +284,19 @@ a{
         margin: 0;
         padding: 0;
     }
+    .dados_cadastrais input{
+        width: 100%;
+    }
+    .dados_cadastrais select{
+        width: 100%;
+    }
+    .planos select{
+        width: 100%;
+    }
+    .assinatura select{
+        width: 100%;
+    }
+    .data input{
+        width: 100%;
+    }
 }
