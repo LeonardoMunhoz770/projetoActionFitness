@@ -128,3 +128,13 @@ a{
     height: 20px;
     padding: 5px;
 }
+
+
+@media(max-width: 515px){
+    .contentLogin{
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        padding: 10px;
+    }
+}

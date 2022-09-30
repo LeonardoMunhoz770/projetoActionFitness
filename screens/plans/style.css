@@ -150,3 +150,22 @@ a{
 .optionsRegister a:hover{
     background-color: yellow;
 }
+
+@media(max-width: 1000px){
+    .containerStart{
+        display: none;
+    }
+
+}
+
+@media(max-width: 845px){
+    .containerPrincipal{
+        flex-direction: column;
+        align-items: center;
+    }
+    .registration{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
