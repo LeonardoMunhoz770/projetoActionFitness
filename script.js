@@ -8,7 +8,7 @@ const validarAcesso = () =>{
     if(login.length == 0 || senha.length == 0){
         alert("Preencha todos os campos")
     }else{
-        window.location.href = "../menu/index.html"
+        window.location.href = "./screens/menu/index.html"
     }
 }
 
