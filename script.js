@@ -1,6 +1,8 @@
 const validarAcesso = () =>{
     const login = document.querySelector("#login").value;
     const senha = document.querySelector("#senha").value;
+
+    
     if(login.length == 0 || senha.length == 0){
 
         function limparCampos(){
