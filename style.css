@@ -138,3 +138,9 @@ a{
         padding: 10px;
     }
 }
+
+.alerta{
+    color: red;
+    font-size: small;
+    
+}

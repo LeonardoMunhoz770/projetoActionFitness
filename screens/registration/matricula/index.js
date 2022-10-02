@@ -22,11 +22,7 @@ document.querySelector('#register').addEventListener('click', function(){
     }
 })
 
-let dados = [
-    {
-        
-    }
-]
+let dados = {}
 
 document.querySelector('#btn').addEventListener("click", function(){
     
@@ -62,7 +58,16 @@ document.querySelector('#btn').addEventListener("click", function(){
     console.log(dados)
 
     if(nome.length == 0 || cpf.length ==0 || telefone.length == 0 || endereco.length == 0 || numero.length == 0 || bairro.length == 0){
-        alert("Preencha todos os campos")
+        function limparCampos(){
+            document.querySelector("#alerta").remove()
+        }
+
+        let alerta = `<p class="alerta" id="alerta">Preencha todos os campos!</p>`
+        let preencherCampos = document.querySelector("#dados_cadastrais")
+        preencherCampos.innerHTML += alerta;
+
+        setTimeout(limparCampos, 2000)
+
     }else{
         document.querySelector('#dados').innerHTML += `
         <div >
@@ -98,8 +103,12 @@ document.querySelector('#btn').addEventListener("click", function(){
     }
 
 
-    fetch('http://192.168.0.109:3000/controller/matriculaTeste',{
+    fetch('http://127.0.0.1:3000/clientes',{
         method: 'POST',
+        headers:{
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
         body: JSON.stringify(dados)
     })
     .then(res =>{

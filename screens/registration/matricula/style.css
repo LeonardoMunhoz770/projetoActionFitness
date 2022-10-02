@@ -298,3 +298,9 @@ a{
     }
     
 }
+
+.alerta{
+    color: red;
+    font-size: large;
+    
+}
