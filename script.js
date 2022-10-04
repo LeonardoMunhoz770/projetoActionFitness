@@ -39,7 +39,7 @@ const validarAcesso = () =>{
                 
                 
             }else{
-                window.location.href = '/screens/menu/index.html'
+                window.location.href = './screens/menu/index.html'
             }
         }).catch((error) =>{
             console.log(`Erro: ${error}`)
