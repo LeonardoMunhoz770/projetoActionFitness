@@ -31,6 +31,19 @@ html{
     align-items: center;
 }
 
+.optionsMatricula{
+    height: 50px;
+    width: 100%;
+    width: 250px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
 .options:hover{
     background: rgb(250,217,97);
     background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);
@@ -75,8 +88,10 @@ a{
 
 
 .registration{
-    width: 100%;
+    width: 90%;
     justify-content: center;
+    padding: 20px;
+    
     
 }
 
@@ -111,11 +126,14 @@ a{
 }
 
 .optionsRegister{
-    background: rgb(250,217,97);
-    width: 80%;
+    max-width: 100%;
     text-align: center;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.containerMatricula{
+    
 }
 
 .optionsRegister a{
