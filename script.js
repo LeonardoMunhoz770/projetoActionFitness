@@ -5,15 +5,7 @@ const validarAcesso = () =>{
     
     if(login.length == 0 || senha.length == 0){
 
-        function limparCampos(){
-            document.querySelector("#alerta").remove()
-        }
-
-        let alerta = `<p class="alerta" id="alerta">Preencha todos os campos!</p>`
-        let preencherCampos = document.querySelector("#containerInputs")
-        preencherCampos.innerHTML += alerta;
-
-        setTimeout(limparCampos, 1000)
+        console.log('Campos vázio. por favor preencha todos os campos')
 
         
     }else{
