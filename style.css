@@ -19,9 +19,10 @@ body{
 .contentLogin{
     background-color: #fff;
     height: 550px;
-    width: 550px;
+    max-width: 550px;
+    width: 95%;
     display: flex;
-    border-radius: 20px;
+    border-radius: 5px;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -29,7 +30,7 @@ body{
 
 
 .credential{
-    width: 50%;
+    width: 100%;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -46,7 +47,8 @@ p{
 
 .containerInputs{
     height: 150px;
-    width: 250px;
+    max-width: 250px;
+    width: 100%;
     justify-content: center;
     align-items: center;
     display: flex;
