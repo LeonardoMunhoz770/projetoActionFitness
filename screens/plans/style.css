@@ -4,44 +4,36 @@ html{
     justify-content: center;
     align-items: center;
     background-color: #FAF8ED;
-}
-.logo{
-    height: 100%;
-    max-width: 100%;
-    justify-content: flex-start;
-    align-items: center;
-    display: flex;
-}
-
-.imageLogo{
-    width: 150px;
-    height: 150px;
-    border-radius: 20px;
+    margin: 0 auto;
 }
 
 .containerPrincipal{
     margin: 0 auto;
     max-width: 100%;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     display: flex;
     gap: 50px;
     border-radius: 20px;
-    flex-direction: row;
+    flex-direction: column;
     height: 100%;
 }
 
 .options{
     height: 50px;
-    width: 200px;
+    width: 100%;
+    width: 250px;
     display: flex;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    align-items: center;
+}
+
+.options:hover{
     background: rgb(250,217,97);
     background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);
-    justify-content: center;
-    align-items: center;
-    
 }
 
 .iconOptions{
@@ -50,23 +42,19 @@ html{
     padding: 2px;
 }
 
-.containerPrincipal .options:hover{
-    -webkit-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    transform: scale(0.8);
-}
 
 .containerStart{
-    width: 250px;
+    width: 70%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
     justify-content: center;
     align-items: center;
     padding: 20px;
     background-color: white;
-    border-radius: 20px;
+    border-radius: 5px;
     box-shadow: 0 0 1em gray;
+
 }
 
 a{
@@ -76,14 +64,21 @@ a{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: black;
     padding-left: 5px;
+    width: 100%;
+}
+
+@media(max-width: 1300px){
+    .containerStart{
+        flex-direction: column;
+    }
 }
 
 .formPlans{
     margin: 0 auto;
     height: 100%;
-    max-width: 80%;
+    max-width: 100%;
     background-color: white;
-    border-radius: 20px;
+    border-radius: 5px;
     box-shadow: 0 0 1em gray;
     justify-content: center;
     align-items: center;
@@ -93,7 +88,7 @@ a{
     padding: 20px;
 }
 .containerForm{
-    width: 100%;
+    width: 80%;
     justify-content: center;
     padding: 20px;
 }
@@ -103,7 +98,7 @@ a{
     background: rgb(250,217,97);
     background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);
     width: 70%;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .plano_basico h3{

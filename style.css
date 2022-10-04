@@ -78,7 +78,7 @@ p{
 
 input{
     height: 40px;
-    width: 190px;
+    width: 100%;
     border: none;
     background-color: #E6E6E6;
 }
