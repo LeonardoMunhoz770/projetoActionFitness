@@ -58,15 +58,7 @@ document.querySelector('#btn').addEventListener("click", function(){
     console.log(dados)
 
     if(nome.length == 0 || cpf.length ==0 || telefone.length == 0 || endereco.length == 0 || numero.length == 0 || bairro.length == 0){
-        function limparCampos(){
-            document.querySelector("#alerta").remove()
-        }
-
-        let alerta = `<p class="alerta" id="alerta">Preencha todos os campos!</p>`
-        let preencherCampos = document.querySelector("#dados_cadastrais")
-        preencherCampos.innerHTML += alerta;
-
-        setTimeout(limparCampos, 2000)
+        alert('Preencha todos os campos')
 
     }else{
         document.querySelector('#dados').innerHTML += `

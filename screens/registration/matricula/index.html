@@ -50,55 +50,61 @@
             
         </div>
         <div class="registration">
+            <h1>Matricula</h1>
             <form action="" class="formRegister" id="formRegister">
-                <h1>Matricula</h1>
-                <div class="container">
-                    <div class="plano_assinatura">
-                        <div class='planos'>
-                            <label>Escolha o Plano: </label>
-                            <select id="tipo_plano">
-                                <option id="basico" value="planobasico">Plano Básico</option>
-                                <option id="completo" value="completo">Plano Completo</option>
-                                <option id="familiar_basico" value="planofamiliar">Plano Familiar - Básico</option>
-                                <option id="familiar_completo" value="planofamiliar">Plano Familiar - Completo</option>
-                                <option id="especializado" value="planoespecializado">Plano Especializado</option>
-                            </select>
-                            <a href="../../plans/index.html">Ver planos</a>
-                        </div>
-                        <div class="assinatura">
-                            <label>Vigencia da Assinatura: </label>
-                            <select id="vigencia">
-                                <option id="mensal" value="mensal">Mensal</option>
-                                <option id="trimestral" value="trimestral">Trimestral - 15%</option>
-                                <option id="semestral" value="semestral">Semestral - 20%</option>
-                                <option id="anual" value="anual">Anual - 30%</option>
-                                <option id="desconto" value="desconto">Desconto por parceria - 10%</option>
-                            </select>
-                        </div>
-                        <div class="data">
-                            <label>Selecione a data de vencimento mensal: </label>
-                            <input type="date" id="vencimento">
-                        </div>
-                    </div>
-                    
-                    <div class="dados_cadastrais" id="dados_cadastrais">
-                        <input type="text" id="nome_completo" placeholder="Nome Completo">
-                        <input type="text" id="cpf" placeholder="Digite seu CPF" maxlength="14" autocomplete="off">
-                        <input type="date" id="nasc" /> 
-                        <input type="tel" placeholder="Telefone" id="telefone" maxlength="15"/>
-                        <input type="text" placeholder="CEP" id="cep" maxlength="8">
-                        <input type="text" placeholder="Endereço" id="endereco"/>
-                        <input type="text" placeholder="Numero" id="numero"/>
-                        <input type="text" placeholder="Bairro" id="bairro"/>
-                        <select id="genero">
-                            <option>Masculino</option>
-                            <option>Feminino</option>
-                        </select>
-                    </div>
-                </div>
                 <div class="buttons">
-                    <button type="button" id="btnprint" onclick="imprimirDados()">Imprimir</button>
                     <button type="button" id="btn">Finalizar Cadastro</button>
+                    <button type="button" id="btnprint" onclick="imprimirDados()">Imprimir</button>
+                </div>
+                <div class="dadosPessoais">
+                    <h1>Dados Pessoais</h1>
+                    <label>Nome</label>
+                    <input type="text" class="input" placeholder="Digite seu nome" id="nome_completo"/>
+                    <label>CPF</label>
+                    <input type="text" class="input" placeholder="Digite seu CPF" id="cpf"/>
+                    <label>Telefone</label>
+                    <input type="text" class="input" placeholder="Digite seu Telefone" id="telefone"/>
+                    <label>Gênero</label>
+                    <select id="genero">
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                    </select>
+                    <label>CEP</label>
+                    <input type="text" class="input" placeholder="Digite seu CEP" id="cep"/>
+                    <label>Endereço</label>
+                    <input type="text" class="input" placeholder="Digite seu Endereço" id="endereco"/>
+                    <label>Número</label>
+                    <input type="text" class="input" placeholder="Número" id="numero"/>
+                    <label>Bairro</label>
+                    <input type="text" class="input" placeholder="Digite seu Telefone" id="bairro"/>
+                    <label>Data de Nascimento</label>
+                    <input type="date" id="nasc">
+                </div>
+                <div class="dadosPlano">
+                    <h1>Informações do Plano</h1>
+                    <label>Escolha o Plano</label>
+                    <select id="tipo_plano">
+                        <option>Plano Básico</option>
+                        <option>Plano Completo</option>
+                        <option>Plano Familiar-Básico</option>
+                        <option>Plano Familiar-Completo</option>
+                        <option>Plano Especializado</option>
+                    </select>
+                    <label>Vigência da Assinatura</label>
+                    <select id="vigencia">
+                        <option>Mensal</option>
+                        <option>Trimestral - 15%</option>
+                        <option>Semestral - 20%</option>
+                        <option>Anual - 30%</option>
+                        <option>Desconto por parceria</option>
+                    </select>
+                    <label>Data de vencimento mensal</label>
+                    <select id="vencimento">
+                        <option>05</option>
+                        <option>10</option>
+                        <option>15</option>
+                        <option>20</option>
+                    </select>
                 </div>
             </form>
         </div>
