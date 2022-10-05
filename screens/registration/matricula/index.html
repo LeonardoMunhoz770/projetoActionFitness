@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,6 +57,7 @@
                     <button type="button" id="btnprint" onclick="imprimirDados()">Imprimir</button>
                 </div>
                 <div class="dadosPessoais">
+                    <span id="select"></span>
                     <h1>Dados Pessoais</h1>
                     <label>Nome</label>
                     <input type="text" class="input" placeholder="Digite seu nome" id="nome_completo"/>
@@ -64,6 +65,8 @@
                     <input type="text" class="input" placeholder="Digite seu CPF" id="cpf"/>
                     <label>Telefone</label>
                     <input type="text" class="input" placeholder="Digite seu Telefone" id="telefone"/>
+                    <label>E-mail</label>
+                    <input type="text" class="input" placeholder="Digite seu E-mail" id="e-mail"/>
                     <label>Gênero</label>
                     <select id="genero">
                         <option>Masculino</option>
@@ -84,11 +87,11 @@
                     <h1>Informações do Plano</h1>
                     <label>Escolha o Plano</label>
                     <select id="tipo_plano">
-                        <option>Plano Básico</option>
                         <option>Plano Completo</option>
                         <option>Plano Familiar-Básico</option>
                         <option>Plano Familiar-Completo</option>
                         <option>Plano Especializado</option>
+                        <option>Plano Basico</option>
                     </select>
                     <label>Vigência da Assinatura</label>
                     <select id="vigencia">

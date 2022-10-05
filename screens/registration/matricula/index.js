@@ -54,10 +54,12 @@ document.querySelector('#btn').addEventListener("click", function(){
     dados['numero'] = numero
     let bairro = document.querySelector('#bairro').value;
     dados['bairro'] = bairro
+    let email = document.querySelector("#e-mail").value;
+    dados['e-mail'] = email
 
     console.log(dados)
 
-    if(nome.length == 0 || cpf.length ==0 || telefone.length == 0 || endereco.length == 0 || numero.length == 0 || bairro.length == 0){
+    if(nome.length == 0 || cpf.length ==0 || telefone.length == 0 || endereco.length == 0 || numero.length == 0 || bairro.length == 0 || email.length == 0){
         alert('Preencha todos os campos')
 
     }else{
@@ -71,6 +73,7 @@ document.querySelector('#btn').addEventListener("click", function(){
                 <label>Gênero: ${dados.genero}</label><br>
                 <label>Telefone: ${dados.telefone}</label><br>
                 <label>Data de Nascimento: ${dados.nasc}</label>
+                <label>E-mail:${email} </label>
             </div>
             <div>
                 <h3>Dados do Plano</h3>
@@ -110,10 +113,17 @@ document.querySelector('#btn').addEventListener("click", function(){
         console.log("ERRO:", res)
     })
 
+
     
     
 })
 
+
+function limparQuery(){
+    const urlParams = new URLSearchParams(window.location.search)
+    urlParams.set('plano', '')
+    window.location.search = urlParams
+}
 
 
 function imprimirDados() {
@@ -174,3 +184,29 @@ document.querySelector("#cep").addEventListener('blur', e=>{
        }
     })
 })
+
+
+const selecionarSelect = () =>{
+    var query = location.search.slice(1);
+    var partes = query.split('&');
+    var data = {};
+    partes.forEach(function (parte) {
+        var chaveValor = parte.split('=');
+        var chave = chaveValor[0];
+        var valor = chaveValor[1];
+        data[chave] = valor;
+    }); 
+    let text = data.plano.replace('+', ' ')
+    let select = document.querySelector('#tipo_plano');
+    for (var i = 0; i < select.options.length; i++) {
+    if (select.options[i].text === text) {
+        select.selectedIndex = i;
+        break;
+    }
+}
+    document.querySelector('#select').innerHTML += `${text} selecionado`
+
+}
+
+selecionarSelect()
+

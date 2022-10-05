@@ -7,6 +7,18 @@ html{
     margin: 0 auto;
 }
 
+
+.buttonShow{
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 35px;
+}
+
+.containerButtonShow{
+    padding: 10px;
+}
+
 .containerPrincipal{
     margin: 0 auto;
     max-width: 100%;
@@ -74,17 +86,17 @@ a{
     }
 }
 
+
 .formPlans{
     margin: 0 auto;
     height: 100%;
     max-width: 100%;
-    background-color: white;
     border-radius: 5px;
     box-shadow: 0 0 1em gray;
     justify-content: center;
     align-items: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
     padding: 20px;
 }
@@ -94,58 +106,84 @@ a{
     padding: 20px;
 }
 
-
-.container{
-    background: rgb(250,217,97);
-    background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);
-    width: 70%;
-    border-radius: 5px;
-}
-
-.plano_basico h3{
-    text-align: center;
-    font-size: 24px;
-}
-
-.plano_basico li{
-    font-size: large;
+.formPlans .containerPlano{
+    max-width: 100%;
+    width: 350px;
+    max-height: 70%;
+    height: 550px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 
-.buttonShow{
-    border: none;
-    cursor: pointer;
-    width: 40px;
-    height: 35px;
-}
-
-.containerButtonShow{
-    padding: 10px;
-}
-
-.optionsRegister{
-    display: none;
-}
-
-.optionsRegister{
-    background: rgb(250,217,97);
-    background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);
-    width: 50%;
-    text-align: center;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.optionsRegister a{
-    font-size: 15px;
+.containerPlano h1{
+    width: 100%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+    color: rgba(255,179,0,1);
+    text-align: center;
 }
 
 
-.optionsRegister a:hover{
-    background-color: yellow;
+.containerPlano ul, li{
+    list-style-type: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
 }
+
+.obterPlano{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    max-height: 100%;
+    right: 0;
+    left: 0;
+
+    
+}
+
+.obterPlano button{
+    width: 60%;
+    height: 40px;
+    background-color: #FAF8ED;
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.obterPlano button:hover{
+    background: rgb(250,217,97);
+    background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);
+}
+
+.valor{
+    text-align: center;
+    width: 100%;
+}
+
+.valor h3{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: x-large;
+}
+
+.beneficios{
+    width: 100%;
+    max-height: 100%;
+    display: flex;
+}
+
+hr{
+    width: 70%;
+}
+
+
+@media(max-width: 825px){
+    .formPlans{
+        flex-direction: column;
+    }
+}
+
 
 @media(max-width: 1000px){
     .containerStart{
@@ -163,3 +201,4 @@ a{
         width: 100%;
     }
 }
+

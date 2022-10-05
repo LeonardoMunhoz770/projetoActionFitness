@@ -250,6 +250,11 @@ a{
     
 }
 
+
+.dados{
+    display: none;
+}
+
 .alerta{
     color: red;
     font-size: large;

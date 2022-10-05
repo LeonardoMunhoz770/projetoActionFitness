@@ -42,3 +42,4 @@ const validarAcesso = () =>{
 document.querySelector("#validar").addEventListener("click", function(){
     validarAcesso()
 })
+
