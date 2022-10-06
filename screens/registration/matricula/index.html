@@ -57,14 +57,14 @@
                     <button type="button" id="btnprint" onclick="imprimirDados()">Imprimir</button>
                 </div>
                 <div class="dadosPessoais">
-                    <span id="select"></span>
+                    <span id="select" class="selectPlano"></span>
                     <h1>Dados Pessoais</h1>
                     <label>Nome</label>
                     <input type="text" class="input" placeholder="Digite seu nome" id="nome_completo"/>
                     <label>CPF</label>
-                    <input type="text" class="input" placeholder="Digite seu CPF" id="cpf"/>
+                    <input type="text" class="input" placeholder="Digite seu CPF" id="cpf" maxlength="14"/>
                     <label>Telefone</label>
-                    <input type="text" class="input" placeholder="Digite seu Telefone" id="telefone"/>
+                    <input type="text" class="input" placeholder="Digite seu Telefone" id="telefone" maxlength="15"/>
                     <label>E-mail</label>
                     <input type="text" class="input" placeholder="Digite seu E-mail" id="e-mail"/>
                     <label>Gênero</label>
@@ -88,7 +88,7 @@
                     <label>Escolha o Plano</label>
                     <select id="tipo_plano">
                         <option>Plano Completo</option>
-                        <option>Plano Familiar-Básico</option>
+                        <option>Plano Familiar-Basico</option>
                         <option>Plano Familiar-Completo</option>
                         <option>Plano Especializado</option>
                         <option>Plano Basico</option>
