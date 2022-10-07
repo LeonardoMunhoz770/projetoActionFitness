@@ -17,7 +17,7 @@ async function reqLogin(){
         if(response != true){
             function noLoading(){
                 loading.style.display = 'none'
-                
+                enviarLogin()
             }
             setTimeout(noLoading, 3000)
         }else{
