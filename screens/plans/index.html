@@ -37,7 +37,7 @@
             </div> 
             <div class="containerForm">
                 <div class="formPlans">
-                    <div class="containerPlano">
+                    <div class="containerPlano" >
                         <div class="valor">
                             <h1 id="plano">Plano Basico</h1>
                             <h3>
@@ -57,10 +57,10 @@
     
                         
                         <div class="obterPlano">
-                            <button onclick="selectPlanoBasico()">Obter Plano</button>
+                            <button data-plano="Plano Basico" class="botao">Obter Plano</button>
                         </div>
                     </div>
-                    <div class="containerPlano">
+                    <div class="containerPlano" >
                         <div class="valor">
                             <h1 id="planoCompleto">Plano Completo</h1>
                             <h3>
@@ -84,10 +84,10 @@
                         
                         
                         <div class="obterPlano">
-                            <button id="selectPlano" onclick="selectPlanoCompleto()">Obter Plano</button>
+                            <button id="selectPlano" data-plano="Plano Completo" class="botao">Obter Plano</button>
                         </div>
                     </div>
-                    <div class="containerPlano">
+                    <div class="containerPlano" >
                         <div class="planoFamiliar_basico">
                             <h1 id="planoFamiliarBasico">Plano Familiar-Basico</h1>
                             <h3>
@@ -97,10 +97,10 @@
                             <span>Mesmos benefícios do plano básico, com 10% de desconto por familiar.</span>
                             <hr>
                             <div class="obterPlano">
-                                <button id="selectPlano" onclick="selectPlanoFamiliarBasico()">Obter Plano</button>
+                                <button id="selectPlano" data-plano="Plano Familiar-Basico" class="botao">Obter Plano</button>
                             </div>
                         </div>
-                        <div class="planoFamiliar_completo">
+                        <div class="planoFamiliar_completo" >
                             <h1 id="planoFamiliarCompleto">Plano Familiar-Completo</h1>
                             <h3>
                                 R$ 54,99
@@ -108,11 +108,11 @@
                             <p>por mês</p>
                             <span>Mesmos benefícios do plano básico, com 10% de desconto por familiar.</span>
                             <div class="obterPlano">
-                                <button id="selectPlano" onclick="selectPlanoFamiliarCompleto()">Obter Plano</button>
+                                <button id="selectPlano" data-plano="Plano Familiar-Completo" class="botao">Obter Plano</button>
                             </div>
                         </div>     
                     </div>
-                    <div class="containerPlano">
+                    <div class="containerPlano" data-plano="Plano Completo" class="botao">
                         <h1>Plano Completo</h1>
                         <div>
                             <ul>
