@@ -27,7 +27,7 @@ let dados = {}
 document.querySelector('#btn').addEventListener("click", function(){
     
 
-    let select = document.querySelector("#tipo_plano"); 
+    let select = document.querySelector("#tipoPlano"); 
     let plano = select.options[select.selectedIndex].text;
     dados['plan'] = plano;
     let selectMatricula = document.querySelector('#vigencia');
@@ -55,7 +55,7 @@ document.querySelector('#btn').addEventListener("click", function(){
     let bairro = document.querySelector('#bairro').value;
     dados['bairro'] = bairro
     let email = document.querySelector("#e-mail").value;
-    dados['e-mail'] = email
+    dados['email'] = email
 
     console.log(dados)
 
@@ -197,7 +197,7 @@ const selecionarSelect = () =>{
         data[chave] = valor;
     }); 
     let text = data.plano.replace('+', ' ')
-    let select = document.querySelector('#tipo_plano');
+    let select = document.querySelector('#tipoPlano');
     for (var i = 0; i < select.options.length; i++) {
     if (select.options[i].text === text) {
         select.selectedIndex = i;

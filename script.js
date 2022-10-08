@@ -4,7 +4,7 @@ async function reqLogin(){
     let loading = document.querySelector(".lds-ring")
     loading.style.display = 'flex'
 
-    await fetch("http://127.0.0.1:3000/login", {
+    await fetch("https://actionfitness.herokuapp.com/login", {
         method: "POST",
         headers:{
             'Content-Type': 'application/json'        
@@ -21,6 +21,7 @@ async function reqLogin(){
                 loading.style.display = 'none'
             }
             setTimeout(noLoading, 3000)
+            
         }else{
             console.log(response)
             function noLoading(){
