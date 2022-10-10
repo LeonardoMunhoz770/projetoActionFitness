@@ -17,22 +17,13 @@ async function reqLogin(){
     .then((response) =>{
         if(response.userValid !== true){
             console.log(response)
-            function noLoading(){
-                loading.style.display = 'none'
-            }
-            setTimeout(noLoading, 3000)
-            
         }else{
             console.log(response)
-            function noLoading(){
-                loading.style.display = 'none'
-                enviarLogin()
-            }
-            setTimeout(noLoading, 3000)
         }
         
     }).finally(() =>{
-        
+        setTimeout(loading.style.display = 'none', 3000)
+        enviarLogin()
     }).catch((error ) =>{
         console.log(error)
     })

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Principal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <div class="containerButtonShow">
+        <img id="showButton" class="buttonShow" src="../../assets/showIcon.jfif"></button>
+    </div>
+    <section class="containerPrincipal"> 
+        <div class="containerStart">
+            <h1>Menu Principal</h1>
+            <div class="options">
+                <img src="../../assets/icon-registration.png" class="iconOptions"/>
+                <a href="../registration/matricula/index.html" for="client">Matricula</a>
+            </div>
+            <div class="options">
+                <img src="../../assets/icon-sell.png" class="iconOptions"/>
+                <a href="../plans/index.html" for="client">Planos</a>
+            </div>
+            <div class="options">
+                <img src="../../assets/icon-financial.png" class="iconOptions"/>
+                <a href="" for="client">Financeiro</a>
+            </div>
+            <div>
+                <div class="optionsAdm" style="background: rgb(250,217,97); background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);">
+                    <img src="../../assets/icon-administration.png" class="iconOptions" />
+                    <a href="" for="client" >Administrativo</a>
+                    <div id="register">
+                        <img src="../../assets/icon_show.png" class="iconShow" />
+                    </div>
+                    
+                </div>
+                <div class="user">
+                    <div>
+                        <a>Teste</a>
+                    </div>
+                    <div>
+                        <a>Teste</a>
+                    </div>
+                    <div>
+                        <a>Teste</a>
+                    </div>
+                </div>
+            </div>
+            <div class="options">
+                <img src="../../assets/icon-client.png" class="iconOptions"/>
+                <a href="" for="client">Área do Cliente</a>
+            </div>
+        </div>
+        <div class="containerRegistro">
+            <h1>Cadastro de usuário no sistema</h1>
+            <form class="formRegister">
+                <div>
+                    <div class="logo">
+                        <img src="../../assets/logo_projeto.jpg">
+                    </div>
+                    <div class="inputs">
+                        <label>Nome</label>
+                        <input type="text"placeholder="Nome" id="nomeColaborador"/>
+                        <label>Usuário</label>
+                        <input type="text" placeholder="Login" id="userColaborador"/>
+                        <label>Senha</label>
+                        <input type="password" placeholder="Senha" id="senhaColaborador"/>
+                    </div>
+                    
+                    <div class="containerButton">
+                        <button id="registrar" type="button">Registrar</button>
+                    </div>
+                    
+                </div>
+                <div class="lds-dual-ring"></div>
+            </form>
+            
+        </div>
+    </section>    
+</body>
+    <script src="index.js"></script>
+</html>
