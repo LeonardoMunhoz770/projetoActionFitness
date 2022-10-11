@@ -33,8 +33,16 @@ function enviarDados(){
     let nome = document.querySelector("#nomeColaborador").value;
     let usuario = document.querySelector("#userColaborador").value;
     let senha = document.querySelector("#senhaColaborador").value
-    
-    fetch('http://localhost:3000/funcionarios',{
+    if(nome.length == 0 || usuario.length == 0 || senha.length == 0){
+        setTimeout(loading.style.display = 'none', 3000)
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Preencha todos os campos!',
+            timer: 3000
+        })
+    }else{
+        fetch('http://localhost:3000/funcionarios',{
         method: 'POST',
         headers:{
             'Accept': 'application/json',
@@ -45,21 +53,23 @@ function enviarDados(){
             usuario: usuario,
             senha: senha
         })
-    }).then((response) =>{
-        Swal.fire(
-            'Bom trabalho!',
-            'Os dados foram enviados com sucesso!',
-            'success'
-        )
-    }).catch((error) =>{
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Algo deu errado',
-            footer: `<label>Contate o administrador! ${error}</label>`,
-            timer: 2000
-          })
-    }).finally(() =>{
-        setTimeout(loading.style.display = 'none', 3000)
-    })
+        }).then((response) =>{
+            Swal.fire(
+                'Bom trabalho!',
+                'Os dados foram enviados com sucesso!',
+                'success'
+            )
+        }).catch((error) =>{
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Algo deu errado',
+                footer: `<label>Contate o administrador! ${error}</label>`,
+                timer: 3000
+            })
+        }).finally(() =>{
+            setTimeout(loading.style.display = 'none', 3000)
+        })
+    }
+    
 }
