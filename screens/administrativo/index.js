@@ -30,10 +30,10 @@ function enviarDados(){
 
     let loading = document.querySelector(".lds-dual-ring")
     loading.style.display = 'flex'
-
     let nome = document.querySelector("#nomeColaborador").value;
     let usuario = document.querySelector("#userColaborador").value;
     let senha = document.querySelector("#senhaColaborador").value
+    
     fetch('http://localhost:3000/funcionarios',{
         method: 'POST',
         headers:{
@@ -48,7 +48,7 @@ function enviarDados(){
     }).then((response) =>{
         console.log('Usuário registrado.')
     }).catch((error) =>{
-        console.log('erro', error)
+        alert(`Erro:${error} - Contate o adminsitrador do sistema.`)
     }).finally(() =>{
         setTimeout(loading.style.display = 'none', 3000)
     })

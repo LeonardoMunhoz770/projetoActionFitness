@@ -4,7 +4,7 @@ async function reqLogin(){
     let loading = document.querySelector(".lds-ring")
     loading.style.display = 'flex'
 
-    await fetch("https://actionfitness.herokuapp.com/login", {
+    await fetch("http://localhost:3000/login", {
         method: "POST",
         headers:{
             'Content-Type': 'application/json'        
@@ -16,16 +16,16 @@ async function reqLogin(){
     }).then( response => response.json())
     .then((response) =>{
         if(response.userValid !== true){
-            console.log(response)
+            alert('Usuário/Senha não registrados no sistema')
         }else{
-            console.log(response)
+            enviarLogin()
         }
         
     }).finally(() =>{
         setTimeout(loading.style.display = 'none', 3000)
         enviarLogin()
     }).catch((error ) =>{
-        console.log(error)
+        alert(`Erro: ${error} - Contate o administrador do sistema.`)
     })
 }
 
