@@ -46,9 +46,19 @@ function enviarDados(){
             senha: senha
         })
     }).then((response) =>{
-        console.log('Usuário registrado.')
+        Swal.fire(
+            'Bom trabalho!',
+            'Os dados foram enviados com sucesso!',
+            'success'
+        )
     }).catch((error) =>{
-        alert(`Erro:${error} - Contate o adminsitrador do sistema.`)
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Algo deu errado',
+            footer: `<label>Contate o administrador! ${error}</label>`,
+            timer: 2000
+          })
     }).finally(() =>{
         setTimeout(loading.style.display = 'none', 3000)
     })
