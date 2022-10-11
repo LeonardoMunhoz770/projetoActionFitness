@@ -16,16 +16,26 @@ async function reqLogin(){
     }).then( response => response.json())
     .then((response) =>{
         if(response.userValid !== true){
-            alert('Usuário/Senha não registrados no sistema')
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Usuário não encontrado!',
+                timer: 2000
+            })
         }else{
             enviarLogin()
         }
         
     }).finally(() =>{
         setTimeout(loading.style.display = 'none', 3000)
-        enviarLogin()
     }).catch((error ) =>{
-        alert(`Erro: ${error} - Contate o administrador do sistema.`)
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Algo deu errado',
+            footer: `<label>Contate o administrador! ${error}</label>`,
+            timer: 2000
+          })
     })
 }
 
@@ -36,7 +46,12 @@ const validarAcesso = () =>{
 
     //Verifica se os campos estão vazios.
     if(login.length == 0 || senha.length == 0){
-        console.log('Campos vázio. por favor preencha todos os campos')
+        Swal.fire({
+            icon:'error',
+            title: 'Oops...',
+            text: 'Preencha todos os campos!',
+            timer: 2000
+        })
     }
         //Envia o login e senha para o backend realizar a validação
     else{    

@@ -59,8 +59,14 @@ document.querySelector('#btn').addEventListener("click", function(){
 
     console.log(dados)
 
-    if(nome.length == 0 || cpf.length ==0 || telefone.length == 0 || endereco.length == 0 || numero.length == 0 || bairro.length == 0 || email.length == 0){
-        alert('Preencha todos os campos')
+    if(nome.length ==0 || cpf.length == 0 || telefone.length == 0 || endereco.length == 0 || numero.length == 0 || bairro.length == 0 || email.length == 0){
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Preencha todos os campos!',
+            timer: 2000
+        }
+        )
 
     }else{
         document.querySelector('#dados').innerHTML += `
@@ -94,10 +100,6 @@ document.querySelector('#btn').addEventListener("click", function(){
             </u>
         </div>
     `
-    alert("Dados registrados com sucesso!")
-    }
-
-
     fetch('http://127.0.0.1:3000/clientes',{
         method: 'POST',
         headers:{
@@ -107,15 +109,22 @@ document.querySelector('#btn').addEventListener("click", function(){
         body: JSON.stringify(dados)
     })
     .then(res =>{
-        console.log("DADOS ENVIADOS", res)
+        Swal.fire(
+            'Bom trabalho!',
+            'Os dados foram enviados com sucesso!',
+            'success'
+        )
     })
     .catch(res =>{
-        console.log("ERRO:", res)
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Algo deu errado',
+            footer: `<label>Contate o administrador! ${res}</label>`,
+            timer: 2000
+        })
     })
-
-
-    
-    
+    }
 })
 
 
