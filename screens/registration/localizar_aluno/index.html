@@ -23,7 +23,7 @@
                 <img src="../../../assets/icon-sell.png" class="iconOptions"/>
                 <a href="../../plans/index.html" for="client">Planos</a>
             </div>
-            <div class="options">
+            <div class="options" onclick="mensagemErro()">
                 <img src="../../../assets/icon-financial.png" class="iconOptions"/>
                 <a href="../../finance/index.html" for="client">Financeiro</a>
             </div>
@@ -31,9 +31,9 @@
                 <img src="../../../assets/icon-administration.png" class="iconOptions"/>
                 <a href="../../administrativo/index.html" for="client">Administrativo</a>
             </div>
-            <div class="options">
+            <div class="options" onclick="mensagemErro()">
                 <img src="../../../assets/icon-client.png" class="iconOptions"/>
-                <a href="" for="client">Área do Cliente</a>
+                <label for="client">Área do Cliente</label>
             </div>
         </div>
         <div class="containerBusca" id="containerBusca">
@@ -49,4 +49,5 @@
     </section>
 </body>
     <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </html>

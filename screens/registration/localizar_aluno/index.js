@@ -69,3 +69,10 @@ function enviarDados(){
     campo_nome = document.getElementById("nome").textContent;
     console.log(campo_nome)
 }
+function mensagemErro(){
+    Swal.fire({
+        icon: 'error',
+        title: "Oops...",
+        text: 'Estamos desenvolvendo esta tela :/'
+    })
+}

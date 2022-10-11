@@ -16,3 +16,10 @@ function armazenarUsuario(){
 armazenarUsuario()
 
 
+function mensagemErro(){
+    Swal.fire({
+        icon: 'error',
+        title: "Oops...",
+        text: 'Estamos desenvolvendo esta tela :/'
+    })
+}

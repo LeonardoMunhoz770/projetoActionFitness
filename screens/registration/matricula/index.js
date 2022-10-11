@@ -219,3 +219,11 @@ const selecionarSelect = () =>{
 
 selecionarSelect()
 
+
+function mensagemErro(){
+    Swal.fire({
+        icon: 'error',
+        title: "Oops...",
+        text: 'Estamos desenvolvendo esta tela :/'
+    })
+}

@@ -22,3 +22,12 @@ let botao = document.querySelectorAll('.botao').forEach(btn =>{
         window.location.href = `../registration/matricula/index.html?${urlParams}`
     })
 })
+
+
+function mensagemErro(){
+    Swal.fire({
+        icon: 'error',
+        title: "Oops...",
+        text: 'Estamos desenvolvendo esta tela :/'
+    })
+}

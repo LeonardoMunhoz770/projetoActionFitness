@@ -73,3 +73,12 @@ function enviarDados(){
     }
     
 }
+
+function mensagemErro(){
+    Swal.fire({
+        icon: 'error',
+        title: "Oops...",
+        text: 'Estamos desenvolvendo esta tela :/'
+    })
+}
+
