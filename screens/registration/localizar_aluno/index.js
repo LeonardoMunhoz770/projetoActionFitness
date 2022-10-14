@@ -10,9 +10,14 @@ document.querySelector("#showButton").addEventListener("click", function(){
     }
     
 })
+
+
+
+document.querySelector('#pesquisar').addEventListener('click', pesquisarAluno)
+
 function pesquisarAluno(){
     cpf = document.querySelector("#cpf").value;
-
+    
     if(cpf.length == 0){
         Swal.fire({
             icon:'warning',
@@ -21,6 +26,9 @@ function pesquisarAluno(){
             timer: 2000
         })
     }else{
+        const btn = document.querySelector('.button');
+        btn.classList.add('button--loading')
+
         fetch('http://localhost:3000/funcionarios',{
             method: 'POST',
             headers:{
@@ -68,6 +76,8 @@ function pesquisarAluno(){
                 footer: `<label>Contate o administrador! ${error}</label>`,
                 timer: 2000
             })
+        }).finally(() =>{
+            setTimeout(btn.classList.remove("button--loading"), 3000)
         })
     }
     

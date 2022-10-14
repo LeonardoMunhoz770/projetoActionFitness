@@ -38,16 +38,19 @@
         </div>
         <div class="containerBusca" id="containerBusca">
             <div class="containerOpcoes">
-                <input placeholder="Digite o CPF do aluno" maxlength="14" id="cpf" >
+                <input placeholder="Digite o CPF do aluno" maxlength="14" id="cpf" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" >
                 
-                <button onclick="pesquisarAluno()">Pesquisar</button>
-                <button onclick="enviarDados()">Enviar dados</button>
+                <button type="button" class="button" id="pesquisar">
+                    <span class="button__text">Pesquisar</span>
+                </button>
+                <button onclick="enviarDados()" class="butaoEnviar">Enviar dados</button>
             </div>
             <div id="matricula" class="aluno">
         </div>
         
         
     </section>
+    
     
 </body>
     <script src="index.js"></script>
