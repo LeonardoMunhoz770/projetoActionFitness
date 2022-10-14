@@ -10,44 +10,60 @@ document.querySelector("#showButton").addEventListener("click", function(){
     }
     
 })
-
-
 function pesquisarAluno(){
     cpf = document.querySelector("#cpf").value;
 
     if(cpf.length == 0){
         alert('Preencha o campo CPF')
     }else{
-        document.querySelector("#containerBusca").innerHTML += `
-    <div class="formatacaoMatricula">
-                
+        fetch('http://localhost:3000/funcionarios',{
+            method: 'POST',
+            headers:{
+                'Content-Type': 'application/json'        
+            },
+            body: JSON.stringify({
+                cpf: cpf
+            })
+        }).then(response => response.json())
+        .then((response) =>{
+            document.querySelector("#containerBusca").innerHTML += `
+            <div class="formatacaoMatricula">    
                 <div class="dadosMatricula">
                     <h3>Dados de matrícula</h1>
-                    <label contenteditable="true" id="nome"> TESTE </label>
-                    <label>CPF: TESTE</label>
-                    <label>Gênero: TESTE</label>
-                    <label>Telefone: TESTE</label>
-                    <label>Data de Nascimento: TESTE</label>
+                    <label contenteditable="true" id="nome"> ${response.nome} </label>
+                    <label>CPF: ${response.cpf}</label>
+                    <label>Gênero: ${response.genero}</label>
+                    <label>Telefone: ${response.telefone}</label>
+                    <label>Data de Nascimento: ${response.nasc}</label>
                 </div>
                 <div class="dadosPlano">
                     <h3>Dados do Plano</h3>
-                    <label>Nome: TESTE</label>
-                    <label>Vigência: TESTE</label>
-                    <label>Vencimento: TESTE</label>
+                    <label>Nome: ${response.plano}</label>
+                    <label>Vigência: ${response.vigencia}</label>
+                    <label>Vencimento: ${response.vencimento}</label>
                 </div>
                 <div class="dadosEndereco">
                     <h3>Dados de Endereço</h3>
-                    <label>Endereço: TESTE</label>
-                    <label>Número: TESTE</label>
-                    <label>Bairro: TESTE</label>
-                    <label>CEP: TESTE</label>
+                    <label>Endereço: ${response.endereco}</label>
+                    <label>Número: ${response.numero}</label>
+                    <label>Bairro: ${response.bairro}</label>
+                    <label>CEP: ${response.cep}</label>
                 </div>
-
                 <u>
                     Action Fitness
                 </u>
-    </div>
-    `
+            </div>`
+
+
+        }).catch((error) =>{
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Algo deu errado',
+                footer: `<label>Contate o administrador! ${error}</label>`,
+                timer: 2000
+            })
+        })
     }
     
 }
