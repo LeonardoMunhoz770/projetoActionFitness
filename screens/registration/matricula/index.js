@@ -61,7 +61,7 @@ document.querySelector('#btn').addEventListener("click", function(){
 
     if(nome.length ==0 || cpf.length == 0 || telefone.length == 0 || endereco.length == 0 || numero.length == 0 || bairro.length == 0 || email.length == 0){
         Swal.fire({
-            icon: 'error',
+            icon: 'warning',
             title: 'Oops...',
             text: 'Preencha todos os campos!',
             timer: 2000

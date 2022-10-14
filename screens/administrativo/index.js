@@ -36,7 +36,7 @@ function enviarDados(){
     if(nome.length == 0 || usuario.length == 0 || senha.length == 0){
         setTimeout(loading.style.display = 'none', 3000)
         Swal.fire({
-            icon: 'error',
+            icon: 'warning',
             title: 'Oops...',
             text: 'Preencha todos os campos!',
             timer: 3000

@@ -48,7 +48,7 @@ const validarAcesso = () =>{
     //Verifica se os campos estão vazios.
     if(login.length == 0 || senha.length == 0){
         Swal.fire({
-            icon:'error',
+            icon:'warning',
             title: 'Oops...',
             text: 'Preencha todos os campos!',
             timer: 2000

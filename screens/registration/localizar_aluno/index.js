@@ -14,7 +14,12 @@ function pesquisarAluno(){
     cpf = document.querySelector("#cpf").value;
 
     if(cpf.length == 0){
-        alert('Preencha o campo CPF')
+        Swal.fire({
+            icon:'warning',
+            title: 'Oops...',
+            text: 'Preencha o campo CPF!',
+            timer: 2000
+        })
     }else{
         fetch('http://localhost:3000/funcionarios',{
             method: 'POST',
