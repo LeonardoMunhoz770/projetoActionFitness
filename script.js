@@ -28,7 +28,6 @@ async function reqLogin(){
         
     }).finally(() =>{
         setTimeout(loading.style.display = 'none', 3000)
-        enviarLogin()
     }).catch((error ) =>{
         Swal.fire({
             icon: 'error',

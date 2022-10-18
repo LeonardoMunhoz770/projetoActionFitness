@@ -42,7 +42,7 @@ function enviarDados(){
             timer: 3000
         })
     }else{
-        fetch('http://localhost:3000/funcionarios',{
+        fetch('http://localhost:3000/funcionario',{
         method: 'POST',
         headers:{
             'Accept': 'application/json',

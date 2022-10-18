@@ -29,7 +29,7 @@ function pesquisarAluno(){
         const btn = document.querySelector('.button');
         btn.classList.add('button--loading')
 
-        fetch('http://localhost:3000/funcionarios',{
+        fetch('http://localhost:3000/buscarMatricula',{
             method: 'POST',
             headers:{
                 'Content-Type': 'application/json'        
@@ -44,14 +44,15 @@ function pesquisarAluno(){
                 <div class="dadosMatricula">
                     <h3>Dados de matrícula</h1>
                     <label contenteditable="true" id="nome"> ${response.nome} </label>
-                    <label>CPF: ${response.cpf}</label>
+                    <label>CPF: ${response.Cpf}</label>
                     <label>Gênero: ${response.genero}</label>
                     <label>Telefone: ${response.telefone}</label>
                     <label>Data de Nascimento: ${response.nasc}</label>
+                    <label>E-mail ${response.email}</label>
                 </div>
                 <div class="dadosPlano">
                     <h3>Dados do Plano</h3>
-                    <label>Nome: ${response.plano}</label>
+                    <label>Nome: ${response.tipoPlano}</label>
                     <label>Vigência: ${response.vigencia}</label>
                     <label>Vencimento: ${response.vencimento}</label>
                 </div>
@@ -66,7 +67,6 @@ function pesquisarAluno(){
                     Action Fitness
                 </u>
             </div>`
-
 
         }).catch((error) =>{
             Swal.fire({

@@ -5,6 +5,10 @@ html{
     align-items: center;
     background-color: #FAF8ED;
     margin: 0 auto;
+    background-image: url('/assets/image-princpal.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
 .containerPrincipal{
@@ -273,7 +277,7 @@ a{
 }
 
 .buttons{
-    width: 80%;
+    width: 100%;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -289,6 +293,11 @@ a{
     background-color: white;
     border-radius: 5px;
     border: 1px solid #c4c4c4;
+}
+
+.buttons button:hover{
+    background: rgb(250,217,97);
+    background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%)
 }
 
 
