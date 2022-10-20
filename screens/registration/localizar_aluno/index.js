@@ -39,34 +39,19 @@ function pesquisarAluno(){
             })
         }).then(response => response.json())
         .then((response) =>{
-            document.querySelector("#containerBusca").innerHTML += `
-            <div class="formatacaoMatricula">    
-                <div class="dadosMatricula">
-                    <h3>Dados de matrícula</h1>
-                    <label contenteditable="true" id="nome"> ${response.nome} </label>
-                    <label>CPF: ${response.Cpf}</label>
-                    <label>Gênero: ${response.genero}</label>
-                    <label>Telefone: ${response.telefone}</label>
-                    <label>Data de Nascimento: ${response.nasc}</label>
-                    <label>E-mail ${response.email}</label>
-                </div>
-                <div class="dadosPlano">
-                    <h3>Dados do Plano</h3>
-                    <label>Nome: ${response.tipoPlano}</label>
-                    <label>Vigência: ${response.vigencia}</label>
-                    <label>Vencimento: ${response.vencimento}</label>
-                </div>
-                <div class="dadosEndereco">
-                    <h3>Dados de Endereço</h3>
-                    <label>Endereço: ${response.endereco}</label>
-                    <label>Número: ${response.numero}</label>
-                    <label>Bairro: ${response.bairro}</label>
-                    <label>CEP: ${response.cep}</label>
-                </div>
-                <u>
-                    Action Fitness
-                </u>
-            </div>`
+            document.querySelector('#nomeAluno').value = response.nome
+            document.querySelector('#cadastroCPF').value = response.Cpf
+            document.querySelector('#genero').value = response.genero
+            document.querySelector('#telefone').value = response.telefone
+            document.querySelector('#nascimento').value = response.nasc
+            document.querySelector('#email').value = response.email
+            document.querySelector('#plano').value = response.tipoPlano
+            document.querySelector('#vigencia').value = response.vigencia
+            document.querySelector('#vencimento').value = response.vencimento
+            document.querySelector('#rua').value = response.endereco
+            document.querySelector('#numero').value = response.numero
+            document.querySelector('#bairro').value = response.bairro
+            document.querySelector('#cep').value = response.cep
 
         }).catch((error) =>{
             Swal.fire({
