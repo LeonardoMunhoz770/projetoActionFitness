@@ -92,3 +92,16 @@ function mensagemErro(){
         text: 'Estamos desenvolvendo esta tela :/'
     })
 }
+
+let botao = document.querySelectorAll('#editarCampo').forEach(btn =>{
+    btn.addEventListener("click", () => {
+        let buttonClick = btn.dataset.button
+        let idButton = document.querySelector(`#${buttonClick}`)
+        if(idButton.disabled == false){
+            idButton.disabled = true
+        }else{
+            idButton.disabled = false
+        }
+    })
+})
+

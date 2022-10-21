@@ -248,7 +248,7 @@ a{
   }
 
 
-  .informacoesdeMatricula div{
+  .informacoesdeMatricula .matricula,.planos,.endereco{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -270,4 +270,20 @@ a{
     .informacoesdeMatricula input{
         width: 100%;
     }
+  }
+
+  .edit{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+  }
+
+  .edit button{
+    width: 100px;
+    height: 36px;
+    margin-left: 20px;
+    cursor: pointer;
   }
