@@ -153,6 +153,13 @@ a{
     text-align: center;
 }
 
+.containerPlano h3{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
 .planoFamiliar_completo{
     text-align: center;
 }
