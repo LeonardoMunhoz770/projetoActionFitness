@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancelamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="containerButtonShow">
+        <img id="showButton" class="buttonShow" src="../../../assets/showIcon.jfif"></button>
+    </div>
+    <section class="containerPrincipal"> 
+        <div class="containerStart">
+            <div class="options">
+                <img src="../../../assets/icon-registration.png" class="iconOptions"/>
+                <a href="../../registration/matricula/index.html" for="client">Matricula</a>
+            </div>
+            <div class="options">
+                <img src="../../../assets/icon-sell.png" class="iconOptions"/>
+                <a href="../../plans/index.html" for="client">Planos</a>
+            </div>
+            <div>
+                <div class="options" onclick="mensagemErro()" style="background: rgb(250,217,97); background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);">
+                    <img src="../../../assets/icon-financial.png" class="iconOptions"/>
+                    <label >Financeiro</label>
+                    <img src="../../../assets/icon_show.png" class="iconShow" id="showOptions"/>
+                </div>
+                <div class="containerOptions"> 
+                    <a href="../contasReceber/index.html">Contas a Receber</a>
+                </div>
+            </div>
+            <div class="options">
+                <img src="../../../assets/icon-administration.png" class="iconOptions"/>
+                <a href="../../administrativo/index.html" for="client">Administrativo</a>
+            </div>
+            <div class="options" onclick="mensagemErro()">
+                <img src="../../../assets/icon-client.png" class="iconOptions"/>
+                <label for="client">Área do Cliente</label>
+            </div>
+        </div>
+        <h1>Cancelamento de Matricula</h1>
+        <div class="containerBusca" id="containerBusca">
+            <div>
+                <input placeholder="Digite o CPF do aluno" maxlength="14" id="cpf" class="pesquisar" >
+                <button type="button" class="button" id="pesquisar">
+                    <span>Localizar Aluno</span>
+                </button>
+            </div>
+        </div>
+        <div class="containerInputs">
+            <input type="text" placeholder="Aluno" disabled="" id="Aluno">
+            <input type="text" placeholder="Plano" disabled="" id="Plano">
+            <input type="text" placeholder="Data" disabled="" id="Data">
+        </div>
+        <div>
+            <button id="cancelamento" class="buttonCancelar">Cancelar Plano</button>
+        </div>
+    </section>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+</html>

@@ -1,3 +1,12 @@
+let optionsRegister = document.querySelector('.containerOptions')
+
+document.querySelector('#showOptions').addEventListener('click', function(){
+    if(optionsRegister.style.display === 'none'){
+        optionsRegister.style.display = 'block'
+    }else{
+        optionsRegister.style.display = 'none'
+    }
+})
 let containerButton = document.querySelector(".containerStart")
 
 document.querySelector("#showButton").addEventListener("click", function(){
@@ -24,7 +33,9 @@ inputCpf.addEventListener('keypress', function(){
 })
 
 
-document.querySelector("#pesquisar").addEventListener('click', function(){
+
+
+document.querySelector("#pesquisar").addEventListener("click", function(){
     let cpf = document.querySelector("#cpf").value
 
     if(cpf.length == 0){
@@ -47,7 +58,14 @@ document.querySelector("#pesquisar").addEventListener('click', function(){
             .then((response) =>{
                 document.querySelector("#Aluno").value = response.nome
                 document.querySelector("#Plano").value = response.tipoPlano
-                document.querySelector("#Status").value = 'Ativo'
+                let data = new Date();
+                let dia = String(data.getDate()).padStart(2, '0');
+                let mes = String(data.getMonth() + 1).padStart(2, '0');
+                let ano = data.getFullYear();
+                let dataAtual = dia + '/' + mes + '/' + ano;
+                document.querySelector("#Data").value = dataAtual
+
+
             }).catch((error) =>{
                 Swal.fire({
                     icon: 'error',
@@ -58,23 +76,27 @@ document.querySelector("#pesquisar").addEventListener('click', function(){
                 })
          })       
     }
-    
 })
 
 
-function pegarDados(){
 
-}
-
-
-
-
-let optionsRegister = document.querySelector('.containerOptions')
-
-document.querySelector('#showOptions').addEventListener('click', function(){
-    if(optionsRegister.style.display === 'none'){
-        optionsRegister.style.display = 'block'
-    }else{
-        optionsRegister.style.display = 'none'
-    }
+document.querySelector('#cancelamento').addEventListener('click', function(){
+    Swal.fire({
+        title: 'Você tem certeza disso?',
+        text: "Esta ação não poderá ser desfeita!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sim, cancelar matricula!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+            //executar função de cancelamento de matricula
+          Swal.fire(
+            'Deletado!',    
+            'A matricula do aluno foi cancelada.',
+            'success'
+          )
+        }
+    })
 })

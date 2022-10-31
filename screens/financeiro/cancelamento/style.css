@@ -132,30 +132,6 @@ a{
     width: 120px;
 }
 
-.containerInputs{
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.containerInputs input{
-    height: 50px;
-    width: 35%;
-    font-weight: bold;
-}
-
-.tabela{
-    width: 70%;
-}
-
-.tabela th, td{
-    text-align: center;
-    border: 0.5px solid black;
-    height: 50px;
-}
-
 .containerOptions{
     display: none;
     text-align: center;
@@ -175,3 +151,27 @@ a{
     margin-right: 20px;
 }
 
+.containerInputs{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.containerInputs input{
+    height: 50px;
+    width: 35%;
+    font-weight: bold;
+}
+
+
+.buttonCancelar{
+    background: rgb(250,217,97);
+    background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 120px;
+    height: 56px;
+}
