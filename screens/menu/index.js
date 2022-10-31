@@ -10,16 +10,7 @@ function armazenarUsuario(){
         let valor = chaveValor[1];
         let user = atob(valor)
         data[chave] = user;
-        document.querySelector("#user").innerHTML += `${user}`
+        console.log(user)
     });
 }
 armazenarUsuario()
-
-
-function mensagemErro(){
-    Swal.fire({
-        icon: 'error',
-        title: "Oops...",
-        text: 'Estamos desenvolvendo esta tela :/'
-    })
-}

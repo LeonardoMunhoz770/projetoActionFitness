@@ -108,13 +108,13 @@ document.querySelector('#btn').addEventListener("click", function(){
         },
         body: JSON.stringify(dados)
     })
-    .then(res =>{
+    .then(
         Swal.fire(
             'Bom trabalho!',
             'Os dados foram enviados com sucesso!',
             'success'
         )
-    })
+    )
     .catch(res =>{
         Swal.fire({
             icon: 'error',

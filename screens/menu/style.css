@@ -5,9 +5,6 @@ html{
     align-items: center;
     background-color: #FAF8ED;
     margin: 0 auto;
-    background-image: url('/assets/image-princpal.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 .logo{
     height: 100%;
