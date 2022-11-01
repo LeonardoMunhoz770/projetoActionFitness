@@ -47,7 +47,15 @@ function pesquisarAluno(){
                     timer: 2000
                 })
             }else{
-                console.log(response)
+                let color1 = " rgb(250,217,97)"
+                let color2 = "linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%)"
+                let buttonEnviar = document.querySelector('.butaoEnviar')
+                buttonEnviar.style.backgroundColor = color1
+                buttonEnviar.style.background = color2
+
+                
+                document.getElementById("enviarDados").disabled = false;
+
                 document.querySelector('#nomeAluno').value = response.nome
                 document.querySelector('#cadastroCPF').value = response.cpf
                 document.querySelector('#genero').value = response.genero
@@ -160,13 +168,6 @@ function enviarDados(){
     })
 
 }
-function mensagemErro(){
-    Swal.fire({
-        icon: 'error',
-        title: "Oops...",
-        text: 'Estamos desenvolvendo esta tela :/'
-    })
-}
 
 let botao = document.querySelectorAll('#editarCampo').forEach(btn =>{
     btn.addEventListener("click", () => {
@@ -181,7 +182,37 @@ let botao = document.querySelectorAll('#editarCampo').forEach(btn =>{
 })
 
 
-document.querySelector("#enviarDados").addEventListener('click', enviarDados)
+document.querySelector("#enviarDados").addEventListener('click', function(){
+    let cpf = document.querySelector("#cpf").value
+    if(cpf.length == 0 || cpf.length != 14){
+        Swal.fire({
+            icon:'warning',
+            title: 'Oops...',
+            text: 'Preencha todo o campo CPF!',
+            timer: 2000
+        })
+    }else{
+        enviarDados()
+        document.getElementById("enviarDados").disabled = true;
+        let buttonEnviar = document.querySelector('.butaoEnviar')
+        buttonEnviar.style.background = 'gray'
+        document.querySelector('#nomeAluno').value = ''
+        document.querySelector('#cadastroCPF').value = ''
+        document.querySelector('#genero').value = ''
+        document.querySelector('#telefone').value = ''
+        document.querySelector('#nascimento').value = ''
+        document.querySelector('#email').value = ''
+        document.querySelector('#plano').value = ''
+        document.querySelector('#vigencia').value = ''
+        document.querySelector('#vencimento').value = ''
+        document.querySelector('#rua').value = ''
+        document.querySelector('#numero').value = ''
+        document.querySelector('#bairro').value = ''
+        document.querySelector('#cep').value = ''
+        document.querySelector('#vencimento').value = ''
+        let cpf = document.querySelector("#cpf").value = ''
+    }
+})
 
 
 let user = localStorage.getItem('User')
