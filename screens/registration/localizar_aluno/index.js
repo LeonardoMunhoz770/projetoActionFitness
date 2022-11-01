@@ -18,11 +18,11 @@ document.querySelector('#pesquisar').addEventListener('click', pesquisarAluno)
 function pesquisarAluno(){
     cpf = document.querySelector("#cpf").value;
     
-    if(cpf.length == 0){
+    if(cpf.length == 0 || cpf.length != 14){
         Swal.fire({
             icon:'warning',
             title: 'Oops...',
-            text: 'Preencha o campo CPF!',
+            text: 'Preencha todo o campo CPF!',
             timer: 2000
         })
     }else{
@@ -39,21 +39,30 @@ function pesquisarAluno(){
             })
         }).then(response => response.json())
         .then((response) =>{
-            console.log(response)
-            document.querySelector('#nomeAluno').value = response.nome
-            document.querySelector('#cadastroCPF').value = response.cpf
-            document.querySelector('#genero').value = response.genero
-            document.querySelector('#telefone').value = response.telefone
-            document.querySelector('#nascimento').value = response.nacimento
-            document.querySelector('#email').value = response.email
-            document.querySelector('#plano').value = response.tipoPlano
-            document.querySelector('#vigencia').value = response.vigencia
-            document.querySelector('#vencimento').value = response.data
-            document.querySelector('#rua').value = response.endereco
-            document.querySelector('#numero').value = response.numero
-            document.querySelector('#bairro').value = response.bairro
-            document.querySelector('#cep').value = response.cep
-            document.querySelector('#vencimento').value = response.vencimento
+            if(response.userValid == false){
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Matricula não encontrada!',
+                    timer: 2000
+                })
+            }else{
+                console.log(response)
+                document.querySelector('#nomeAluno').value = response.nome
+                document.querySelector('#cadastroCPF').value = response.cpf
+                document.querySelector('#genero').value = response.genero
+                document.querySelector('#telefone').value = response.telefone
+                document.querySelector('#nascimento').value = response.nacimento
+                document.querySelector('#email').value = response.email
+                document.querySelector('#plano').value = response.tipoPlano
+                document.querySelector('#vigencia').value = response.vigencia
+                document.querySelector('#vencimento').value = response.data
+                document.querySelector('#rua').value = response.endereco
+                document.querySelector('#numero').value = response.numero
+                document.querySelector('#bairro').value = response.bairro
+                document.querySelector('#cep').value = response.cep
+                document.querySelector('#vencimento').value = response.vencimento
+            }
 
         }).catch((error) =>{
             Swal.fire({

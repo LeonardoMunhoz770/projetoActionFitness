@@ -38,11 +38,11 @@ inputCpf.addEventListener('keypress', function(){
 document.querySelector("#pesquisar").addEventListener("click", function(){
     let cpf = document.querySelector("#cpf").value
 
-    if(cpf.length == 0){
+    if(cpf.length == 0 || cpf.length != 14){
         Swal.fire({
             icon:'warning',
             title: 'Oops...',
-            text: 'Preencha o campo CPF!',
+            text: 'Preencha todo o campo CPF!',
             timer: 2000
         })
     }else{
@@ -56,16 +56,24 @@ document.querySelector("#pesquisar").addEventListener("click", function(){
         })
         }).then(response => response.json())
             .then((response) =>{
-                document.querySelector("#Aluno").value = response.nome
-                document.querySelector("#Plano").value = response.tipoPlano
-                let data = new Date();
-                let dia = String(data.getDate()).padStart(2, '0');
-                let mes = String(data.getMonth() + 1).padStart(2, '0');
-                let ano = data.getFullYear();
-                let dataAtual = dia + '/' + mes + '/' + ano;
-                document.querySelector("#Data").value = dataAtual
-
-
+                if(response.userValid == false){
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Matricula não encontrada!',
+                        timer: 2000
+                    })
+                }else{
+                    document.querySelector("#Aluno").value = response.nome
+                    document.querySelector("#Plano").value = response.tipoPlano
+                    let data = new Date();
+                    let dia = String(data.getDate()).padStart(2, '0');
+                    let mes = String(data.getMonth() + 1).padStart(2, '0');
+                    let ano = data.getFullYear();
+                    let dataAtual = dia + '/' + mes + '/' + ano;
+                    document.querySelector("#Data").value = dataAtual
+                }
+                
             }).catch((error) =>{
                 Swal.fire({
                     icon: 'error',
@@ -81,24 +89,36 @@ document.querySelector("#pesquisar").addEventListener("click", function(){
 
 
 document.querySelector('#cancelamento').addEventListener('click', function(){
-    Swal.fire({
-        title: 'Você tem certeza disso?',
-        text: "Esta ação não poderá ser desfeita!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Sim, cancelar matricula!'
-      }).then((result) => {
-        if (result.isConfirmed) {
-            //executar função de cancelamento de matricula
-          Swal.fire(
-            'Deletado!',    
-            'A matricula do aluno foi cancelada.',
-            'success'
-          )
-        }
-    })
+    let cpf = document.querySelector("#cpf").value
+    if(cpf.length == 0){
+        Swal.fire({
+            icon:'warning',
+            title: 'Oops...',
+            text: 'Preencha o campo CPF!',
+            timer: 2000
+        })
+    }else{
+        let aluno = document.querySelector("#Aluno").value;
+        Swal.fire({
+            title: 'Você tem certeza disso?',
+            text: `Esta ação irá inativar o aluno(a) ${aluno}!`,
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sim, cancelar matricula!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+                //executar função de cancelamento de matricula
+              Swal.fire(
+                'Deletado!',    
+                'A matricula do aluno foi cancelada.',
+                'success'
+              )
+            }
+        })
+    }
+    
 })
 
 let user = localStorage.getItem('User')

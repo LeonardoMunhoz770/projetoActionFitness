@@ -50,7 +50,7 @@
         <h1>Contas á Receber</h1>
         <div class="containerBusca" id="containerBusca">
             <div>
-                <input placeholder="Digite o CPF do aluno" maxlength="14" id="cpf" class="pesquisar" >
+                <input placeholder="Digite o CPF do aluno" maxlength="14" id="cpf" class="pesquisar" onkeypress="return event.charCode >= 48 && event.charCode <= 57" autocomplete="off">
                 <button type="button" class="button" id="pesquisar">
                     <span class="button__text">Localizar Aluno</span>
                 </button>

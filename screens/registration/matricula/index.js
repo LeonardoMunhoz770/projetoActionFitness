@@ -57,9 +57,7 @@ document.querySelector('#btn').addEventListener("click", function(){
     let email = document.querySelector("#e-mail").value;
     dados['email'] = email
 
-    console.log(dados)
-
-    if(nome.length ==0 || cpf.length == 0 || telefone.length == 0 || endereco.length == 0 || numero.length == 0 || bairro.length == 0 || email.length == 0){
+    if(nome.length ==0 || cpf.length == 0 || cpf.length != 14 || telefone.length == 0 || endereco.length == 0 || numero.length == 0 || bairro.length == 0 || email.length == 0){
         Swal.fire({
             icon: 'warning',
             title: 'Oops...',
@@ -136,6 +134,11 @@ function limparQuery(){
 
 
 function imprimirDados() {
+    
+
+
+
+
     let conteudo = document.querySelector('#dados').innerHTML;
    tela_impressao = window.open('Contrato Action Fitness');
    tela_impressao.document.write(conteudo);
@@ -224,18 +227,6 @@ const selecionarSelect = () =>{
 }
 
 selecionarSelect()
-
-
-function mensagemErro(){
-    Swal.fire({
-        icon: 'error',
-        title: "Oops...",
-        text: 'Estamos desenvolvendo esta tela :/'
-    })
-}
-
-
-
 
 
 let user = localStorage.getItem('User')

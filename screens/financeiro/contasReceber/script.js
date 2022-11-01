@@ -27,11 +27,11 @@ inputCpf.addEventListener('keypress', function(){
 document.querySelector("#pesquisar").addEventListener('click', function(){
     let cpf = document.querySelector("#cpf").value
 
-    if(cpf.length == 0){
+    if(cpf.length == 0 || cpf.length != 14) {
         Swal.fire({
             icon:'warning',
             title: 'Oops...',
-            text: 'Preencha o campo CPF!',
+            text: 'Preencha todo o campo CPF!',
             timer: 2000
         })
     }else{
@@ -45,9 +45,19 @@ document.querySelector("#pesquisar").addEventListener('click', function(){
         })
         }).then(response => response.json())
             .then((response) =>{
-                document.querySelector("#Aluno").value = response.nome
-                document.querySelector("#Plano").value = response.tipoPlano
-                document.querySelector("#Status").value = 'Ativo'
+                if(response.userValid == false){
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Matricula não encontrada!',
+                        timer: 2000
+                    })
+                }else{
+                    document.querySelector("#Aluno").value = response.nome
+                    document.querySelector("#Plano").value = response.tipoPlano
+                    document.querySelector("#Status").value = 'Ativo'
+                }
+                
             }).catch((error) =>{
                 Swal.fire({
                     icon: 'error',

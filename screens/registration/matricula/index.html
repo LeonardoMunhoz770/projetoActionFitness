@@ -66,7 +66,7 @@
                     <label>Nome</label>
                     <input type="text" class="input" placeholder="Digite seu nome" id="nome_completo"/>
                     <label>CPF</label>
-                    <input type="text" class="input" placeholder="Digite seu CPF" id="cpf" maxlength="14" />
+                    <input type="text" class="input" placeholder="Digite seu CPF" id="cpf" maxlength="14" onkeypress="return event.charCode >= 48 && event.charCode <= 57" autocomplete="off"/>
                     <label>Telefone</label>
                     <input type="text" class="input" placeholder="Digite seu Telefone" id="telefone" maxlength="15" />
                     <label>E-mail</label>
@@ -77,11 +77,11 @@
                         <option>Feminino</option>
                     </select>
                     <label>CEP</label>
-                    <input type="text" class="input" placeholder="Digite seu CEP" id="cep" />
+                    <input type="text" class="input" placeholder="Digite seu CEP" id="cep" onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
                     <label>Endereço</label>
                     <input type="text" class="input" placeholder="Digite seu Endereço" id="endereco"/>
                     <label>Número</label>
-                    <input type="text" class="input" placeholder="Número" id="numero" />
+                    <input type="text" class="input" placeholder="Número" id="numero" onkeypress="return event.charCode >= 48 && event.charCode <= 57"/>
                     <label>Bairro</label>
                     <input type="text" class="input" placeholder="Digite seu Bairro" id="bairro"/>
                     <label>Data de Nascimento</label>

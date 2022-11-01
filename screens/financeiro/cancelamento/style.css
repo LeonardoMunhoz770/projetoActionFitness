@@ -163,10 +163,11 @@ a{
     gap: 10px;
 }
 
-.containerInputs input{
+.containerInputs input, select{
     height: 50px;
     width: 35%;
     font-weight: bold;
+    padding-left: 10px;
 }
 
 

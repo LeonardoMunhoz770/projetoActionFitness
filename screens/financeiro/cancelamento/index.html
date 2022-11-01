@@ -47,7 +47,7 @@
         <h1>Cancelamento de Matricula</h1>
         <div class="containerBusca" id="containerBusca">
             <div>
-                <input placeholder="Digite o CPF do aluno" maxlength="14" id="cpf" class="pesquisar" >
+                <input placeholder="Digite o CPF do aluno" maxlength="14" id="cpf" class="pesquisar" onkeypress="return event.charCode >= 48 && event.charCode <= 57" autocomplete="off">
                 <button type="button" class="button" id="pesquisar">
                     <span>Localizar Aluno</span>
                 </button>
@@ -57,6 +57,13 @@
             <input type="text" placeholder="Aluno" disabled="" id="Aluno">
             <input type="text" placeholder="Plano" disabled="" id="Plano">
             <input type="text" placeholder="Data" disabled="" id="Data">
+            <label>Motivo</label>
+            <select>
+                <option>Desistência do Aluno</option>
+                <option>Resultado abaixo do esperado</option>
+                <option>Troca de Academia</option>
+                <option>Motivos financeiros</option>
+            </select>
         </div>
         <div>
             <button id="cancelamento" class="buttonCancelar">Cancelar Plano</button>
