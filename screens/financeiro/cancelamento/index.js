@@ -100,3 +100,6 @@ document.querySelector('#cancelamento').addEventListener('click', function(){
         }
     })
 })
+
+let user = localStorage.getItem('User')
+document.querySelector("#user").innerHTML = `${user}`

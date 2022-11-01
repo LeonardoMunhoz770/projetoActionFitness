@@ -73,3 +73,6 @@ function enviarDados(){
     }
     
 }
+
+let user = localStorage.getItem('User')
+document.querySelector("#user").innerHTML = `${user}`

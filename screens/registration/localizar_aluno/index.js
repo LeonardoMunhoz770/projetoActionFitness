@@ -173,3 +173,8 @@ let botao = document.querySelectorAll('#editarCampo').forEach(btn =>{
 
 
 document.querySelector("#enviarDados").addEventListener('click', enviarDados)
+
+
+let user = localStorage.getItem('User')
+
+document.querySelector("#user").innerHTML = user

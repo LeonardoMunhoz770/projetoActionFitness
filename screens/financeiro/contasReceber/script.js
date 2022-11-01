@@ -78,3 +78,9 @@ document.querySelector('#showOptions').addEventListener('click', function(){
         optionsRegister.style.display = 'none'
     }
 })
+
+
+let user = localStorage.getItem('User')
+
+document.querySelector("#user").innerHTML = user
+

@@ -22,3 +22,8 @@ let botao = document.querySelectorAll('.botao').forEach(btn =>{
         window.location.href = `../registration/matricula/index.html?${urlParams}`
     })
 })
+
+
+let user = localStorage.getItem('User')
+
+document.querySelector("#user").innerHTML = user

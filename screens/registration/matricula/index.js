@@ -196,6 +196,9 @@ document.querySelector("#cep").addEventListener('blur', e=>{
 
 
 const selecionarSelect = () =>{
+    if(location.search.slice(1) == null || location.search.slice(1).length == 0){
+
+    }else{
     var query = location.search.slice(1);
     var partes = query.split('&');
     var data = {};
@@ -215,6 +218,9 @@ const selecionarSelect = () =>{
 }
     document.querySelector('#select').innerHTML += `${text} selecionado`
 
+    }
+
+    
 }
 
 selecionarSelect()
@@ -227,3 +233,11 @@ function mensagemErro(){
         text: 'Estamos desenvolvendo esta tela :/'
     })
 }
+
+
+
+
+
+let user = localStorage.getItem('User')
+
+document.querySelector("#user").innerHTML = user

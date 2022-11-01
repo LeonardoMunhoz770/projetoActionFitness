@@ -4,10 +4,6 @@ html{
     justify-content: center;
     align-items: center;
     background-color: #FAF8ED;
-    margin: 0 auto;
-    background-image: url('/assets/image-princpal.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
     
 }
 
@@ -134,6 +130,10 @@ a{
 
 .containerButtonShow{
     padding: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .optionsRegister{
@@ -319,4 +319,18 @@ a{
     align-items: center;
     display: flex;
     justify-content: center;
+}
+
+.containerUser{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    justify-content: flex-end;
+}
+
+
+.containerUser img{
+    height: 50px;
+    width: 50px;
 }

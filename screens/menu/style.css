@@ -92,3 +92,16 @@ a{
         flex-direction: column;
     }
 }
+
+.containerUser{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.containerUser img{
+    height: 50px;
+    width: 50px;
+}

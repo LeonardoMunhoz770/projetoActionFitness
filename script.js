@@ -23,6 +23,7 @@ async function reqLogin(){
                 timer: 2000
             })
         }else{
+            localStorage.setItem('User', login)
             enviarLogin()
         }
         

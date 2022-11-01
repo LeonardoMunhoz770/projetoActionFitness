@@ -5,9 +5,6 @@ html{
     align-items: center;
     background-color: #FAF8ED;
     margin: 0 auto;
-    background-image: url('/assets/image-princpal.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .buttonShow{
@@ -19,6 +16,10 @@ html{
 
 .containerButtonShow{
     padding: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
 }
 .logo{
     height: 100%;
@@ -310,6 +311,21 @@ a{
       transform: rotate(360deg);
     }
   }
+
+  .containerUser{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    justify-content: flex-end;
+}
+
+
+.containerUser img{
+    height: 50px;
+    width: 50px;
+}
+
   
 
   
