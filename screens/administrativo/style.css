@@ -318,6 +318,7 @@ a{
     align-items: center;
     gap: 10px; 
     justify-content: flex-end;
+    cursor: pointer;
 }
 
 
@@ -326,6 +327,7 @@ a{
     width: 50px;
 }
 
-  
-
+.logof{
+  display: none;
+}
   

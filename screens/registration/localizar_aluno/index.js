@@ -195,7 +195,7 @@ document.querySelector("#enviarDados").addEventListener('click', function(){
         enviarDados()
         document.getElementById("enviarDados").disabled = true;
         let buttonEnviar = document.querySelector('.butaoEnviar')
-        buttonEnviar.style.background = 'gray'
+        buttonEnviar.style.background = '#C3C3C3'
         document.querySelector('#nomeAluno').value = ''
         document.querySelector('#cadastroCPF').value = ''
         document.querySelector('#genero').value = ''
@@ -218,3 +218,16 @@ document.querySelector("#enviarDados").addEventListener('click', function(){
 let user = localStorage.getItem('User')
 
 document.querySelector("#user").innerHTML = user
+
+document.querySelector("#imageLogin").addEventListener('click', function(){
+    let sair = document.querySelector(".logof")
+
+    if(sair.style.display === 'none'){
+            sair.style.display = "block"
+            sair.style.display = 'flex'
+    }else{
+        sair.style.display = 'none'
+        
+    }
+})
+

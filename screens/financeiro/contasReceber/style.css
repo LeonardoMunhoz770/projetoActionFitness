@@ -186,10 +186,15 @@ a{
     align-items: center;
     gap: 10px; 
     justify-content: flex-end;
+    cursor: pointer;
 }
 
 
 .containerUser img{
     height: 50px;
     width: 50px;
+}
+
+.logof{
+  display: none;
 }

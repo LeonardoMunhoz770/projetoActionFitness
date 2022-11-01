@@ -126,7 +126,7 @@ a{
 }
 
 .containerBusca button:last-child{
-    background-color: gray;
+    background-color: #C3C3C3;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -300,10 +300,15 @@ a{
     align-items: center;
     gap: 10px; 
     justify-content: flex-end;
+    cursor: pointer;
 }
 
 
 .containerUser img{
     height: 50px;
     width: 50px;
+}
+
+.logof{
+  display: none;
 }
