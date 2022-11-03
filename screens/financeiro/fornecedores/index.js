@@ -64,6 +64,7 @@ document.querySelector("#cnpj").addEventListener("blur", function(){
         fetch(url,)
         .then(response => response.json())
         .then((response) =>{
+            console.log(response)
         document.querySelector("#razao_social").value = response.razao_social
         document.querySelector("#uf").value = response.estabelecimento.cidade.nome
         document.querySelector("#bairro").value = response.estabelecimento.bairro
@@ -74,6 +75,7 @@ document.querySelector("#cnpj").addEventListener("blur", function(){
         document.querySelector("#ie_rg").value = response.estabelecimento.inscricoes_estaduais[0].inscricao_estadual
         document.querySelector("#endereco").value = response.estabelecimento.logradouro
         document.querySelector("#telefone").value = response.estabelecimento.telefone1
+        document.querySelector("#cidade").value = response.estabelecimento.cidade.nome
     })
     }
     
@@ -107,8 +109,12 @@ document.querySelector("#btn").addEventListener("click",function(){
     dados["uf"] = uf
     let pais = document.querySelector("#pais").value;
     dados["pais"] = pais
+    let cidade = document.querySelector("#cidade").value;
+    dados["cidade"] = cidade;
+    let fisica_juridica = document.querySelector("#fisica_juridica").value;
+    dados["fisica_juridica"] = fisica_juridica
 
-    if(razao_social.length == 0 || cnpj.length == 0 || ie_rg.length == 0 || telefone.length == 0 || e_mail.length == 0 || cep.length == 0 || endereco.length == 0 || numero.length == 0 || bairro.length == 0 || uf.length == 0 || pais.length == 0){
+    if(razao_social.length == 0 || cnpj.length == 0 || ie_rg.length == 0 || telefone.length == 0 || e_mail.length == 0 || cep.length == 0 || endereco.length == 0 || numero.length == 0 || bairro.length == 0 || uf.length == 0 || pais.length == 0 || cidade.length == 0 || fisica_juridica.length == 0){
         Swal.fire({
             icon: 'warning',
             title: 'Oops...',
@@ -117,7 +123,7 @@ document.querySelector("#btn").addEventListener("click",function(){
         }
         )
     }else{
-        fetch('http://127.0.0.1/fornecedor',{
+        fetch('http://127.0.0.1:3000/fornecedor',{
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

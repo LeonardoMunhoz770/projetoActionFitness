@@ -231,3 +231,7 @@ document.querySelector("#imageLogin").addEventListener('click', function(){
     }
 })
 
+
+document.querySelector("#form").addEventListener("click", function(event){
+    event.preventDefault()
+})
