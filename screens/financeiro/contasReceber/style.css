@@ -198,3 +198,13 @@ a{
 .logof{
   display: none;
 }
+
+
+
+.containerOptions a{
+    font-size: 15px;
+}
+
+.containerOptions div{
+    padding: 5px;
+}

@@ -137,16 +137,24 @@ a{
 }
 
 .containerOptions{
-    display: none;
     text-align: center;
     font-weight: bold;
     padding: 10px;
-    
+    display: none;
 }
 
 .containerOptions label:hover{
     background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);
     cursor: pointer;
+}
+
+.containerOptions a{
+    font-size: 15px;
+
+}
+
+.containerOptions div{
+    padding: 5px;
 }
 
 .iconShow{
@@ -201,3 +209,4 @@ a{
 .logof{
   display: none;
 }
+

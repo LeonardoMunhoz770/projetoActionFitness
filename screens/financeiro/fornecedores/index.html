@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fornecedores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="containerButton">
+        <img id="showButton" class="buttonShow" src="../../../assets/showIcon.jfif ">
+        <div class="containerUser">
+            <label id="user"></label>
+            <img src="../../../assets/iconUser.png" id="imageLogin">
+        </div>
+        <div class="logof">
+            <a href="../../../index.html">Sair</a>
+        </div>
+    </div>
+    <section class="containerPrincipal">
+        <div class="containerStart">
+            <div class="options"  >
+                <img src="../../../assets/icon-registration.png" class="iconOptions"/>
+                <a href="../../registration/matricula/index.html" for="client">Matricula</a>
+            </div>
+            <div class="options">
+                <img src="../../../assets/icon-sell.png" class="iconOptions"/>
+                <a href="../../plans/index.html" for="client">Planos</a>
+            </div>
+            <div>
+                <div class="options" style="background: rgb(250,217,97); background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);">
+                    <img src="../../../assets/icon-financial.png" class="iconOptions"/>
+                    <a href="../../financeiro/contasReceber/index.html">Financeiro</a>
+                    <img src="../../../assets/icon_show.png" class="iconShow" id="showOptions"/>
+                </div>
+                <div class="containerOptions"> 
+                    <div><a href="../cancelamento/index.html">Cancelamento</a><br></div>
+                    <div><a href="../contasReceber/index.html">Contas á Receber</a></div>
+                </div>
+            </div>
+            
+            
+            <div class="options">
+                <img src="../../../assets/icon-administration.png" class="iconOptions"/>
+                <a href="../../administrativo/index.html" for="client">Administrativo</a>
+            </div>
+            <div class="options">
+                <img src="../../../assets/icon-client.png" class="iconOptions"/>
+                <label for="client">Área do Cliente</label>
+            </div>
+        </div>
+    <section>
+        <div class="registration">
+            <h1>Registro de Fornecedores</h1>
+            <form action="" class="formRegister" id="formRegister">
+                
+                <div class="dadosPessoais">
+                    <h1>Dados Cadastrais</h1>
+                    <label>Razão Social</label>
+                    <input type="text" class="input" placeholder="Digite seu nome" id="razao_social"/>
+                    <label>CNPJ</label>
+                    <input type="text" class="input" placeholder="Digite o CNPJ" id="cnpj"/>
+                    <label>IE/RG</label>
+                    <input type="text" class="input" placeholder="IE/RG" id="ie_rg">
+                    <label>Telefone</label>
+                    <input type="text" class="input" placeholder="Digite o Telefone" id="telefone" maxlength="15" />
+                    <label>E-mail</label>
+                    <input type="text" class="input" placeholder="Digite o E-mail" id="e_mail"/>
+                    <label>CEP</label>
+                    <input type="text" class="input" placeholder="Digite seu CEP" id="cep" onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
+                    <label>Endereço</label>
+                    <input type="text" class="input" placeholder="Digite seu Endereço" id="endereco"/>
+                    <label>Número</label>
+                    <input type="text" class="input" placeholder="Número" id="numero" onkeypress="return event.charCode >= 48 && event.charCode <= 57"/>
+                    <label>Bairro</label>
+                    <input type="text" class="input" placeholder="Digite seu Bairro" id="bairro"/>
+                    <label>UF:</label>
+                    <input type="text" class="input" placeholder="UF" id="uf"/>
+                    <label>País</label>
+                    <input type="text" class="input" placeholder="País" id="pais">
+                </div>
+                <div class="buttons">
+                    <button type="button" id="btn">Finalizar Cadastro</button>
+                </div>
+            </form>
+            
+        </div>
+    <section>
+
+    </section>
+</body>
+<script src="./index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</html>
