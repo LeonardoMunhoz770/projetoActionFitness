@@ -180,7 +180,7 @@ a{
 }
 
 .registration{
-    width: 90%;
+    width: 100%;
     justify-content: center;
     padding: 20px;
     
@@ -199,6 +199,7 @@ a{
     gap: 20px;
     background: rgb(250,217,97);
     background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);
+
 }
 
 
@@ -340,4 +341,9 @@ a{
     background-color: white;
     border-radius: 5px;
     border: 1px solid #c4c4c4;
+}
+
+
+.containerRegistro{
+    width: 90%;
 }

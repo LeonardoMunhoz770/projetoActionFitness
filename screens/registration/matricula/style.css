@@ -3,7 +3,7 @@ html{
     max-width: 100%;
     justify-content: center;
     align-items: center;
-    background-color: #FAF8ED;
+
     
 }
 
@@ -78,7 +78,7 @@ html{
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 0 1em gray;
-
+    
 }
 
 a{
@@ -116,8 +116,6 @@ a{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background: rgb(250,217,97);
-    background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);
 }
 
 

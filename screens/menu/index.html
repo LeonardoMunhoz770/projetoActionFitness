@@ -4,40 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Principal</title>
+    <title>Fornecedores</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
 </head>
-<body> 
-    <section class="containerPrincipal"> 
+<body>
+    <div class="containerButton">
+        <img id="showButton" class="buttonShow" src="../../../assets/showIcon.jfif ">
         <div class="containerUser">
-            <img src="../../assets/iconUser.png">
             <label id="user"></label>
+            <img src="../../../assets/iconUser.png" id="imageLogin">
         </div>
+        <div class="logof">
+            <a href="../../../index.html">Sair</a>
+        </div>
+    </div>
+    <section class="containerPrincipal">
         <div class="containerStart">
-            <div class="options">
-                <img src="../../assets/icon-registration.png" class="iconOptions"/>
+            <div class="options"  >
+                <img src="../../../assets/icon-registration.png" class="iconOptions"/>
                 <a href="../registration/matricula/index.html" for="client">Matricula</a>
             </div>
             <div class="options">
-                <img src="../../assets/icon-sell.png" class="iconOptions"/>
+                <img src="../../../assets/icon-sell.png" class="iconOptions"/>
                 <a href="../plans/index.html" for="client">Planos</a>
             </div>
-            <div class="options">
-                <img src="../../assets/icon-financial.png" class="iconOptions"/>
-                <a href="../financeiro/contasReceber/index.html">Financeiro</a>
+            <div>
+                <div class="options">
+                    <img src="../../../assets/icon-financial.png" class="iconOptions"/>
+                    <a href="../financeiro/contasReceber/index.html">Financeiro</a>
+                </div>
             </div>
             <div class="options">
-                <img src="../../assets/icon-administration.png" class="iconOptions"/>
+                <img src="../../../assets/icon-administration.png" class="iconOptions"/>
                 <a href="../administrativo/index.html" for="client">Administrativo</a>
             </div>
             <div class="options">
-                <img src="../../assets/icon-client.png" class="iconOptions"/>
+                <img src="../../../assets/icon-client.png" class="iconOptions"/>
                 <label for="client">Área do Cliente</label>
             </div>
         </div>
-    </section>  
+    <section>
 </body>
-    <script src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="./index.js"></script>
 </html>

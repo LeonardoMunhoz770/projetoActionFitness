@@ -3,7 +3,6 @@ html{
     max-width: 100%;
     justify-content: center;
     align-items: center;
-    background-color: #FAF8ED;
     margin: 0 auto;
 }
 
@@ -85,9 +84,10 @@ a{
 }
 
 .buttonShow{
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 35px;
 }
 
 .containerButton{
@@ -242,6 +242,7 @@ a{
   
   }
 
+  
 
   .informacoesdeMatricula{
     width: 100%;
