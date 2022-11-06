@@ -34,4 +34,3 @@ document.querySelector('#showOptions').addEventListener('click', function(){
         optionsRegister.style.display = 'none'
     }
 })
-

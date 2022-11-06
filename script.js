@@ -24,7 +24,7 @@ async function reqLogin(){
             })
         }else{
             localStorage.setItem('User', login)
-            enviarLogin()
+            window.location.href = `./screens/menu/index.html`
         }
         
     }).finally(() =>{
@@ -58,16 +58,6 @@ const validarAcesso = () =>{
     else{    
         reqLogin()
     }
-}
-
-//Envia o user via query com encode para utilizar na tela de menu na opção usuário logado e avança para a próxima tela.
-const enviarLogin = () =>{
-    let user = document.querySelector("#login").value;
-    const urlParams = new URLSearchParams(window.location.search)
-    urlParams.set('user', `${btoa(user)}`)
-    window.location.search = urlParams
-    window.location.href = `./screens/menu/index.html?${urlParams}`
-
 }
 
 document.querySelector("#validar").addEventListener("click", function(){
