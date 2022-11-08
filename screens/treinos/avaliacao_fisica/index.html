@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fornecedores</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="containerButton">
@@ -45,7 +47,89 @@
                 <a href="">Treinos</a>
             </div>
         </div>
+        <section class="containerTreinos">
+            <form class="form">
+                <div class="informacoesIniciais">
+                    <h1>Identificação do Aluno</h1>
+                    <div>
+                        <input type="text" placeholder="Nome do Auno">
+                        <input type="text" placeholder="Idade">
+                    </div>   
+                </div>
+                <div class="anamneseDoAluno">
+                    <h1>Anamnese do Aluno</h1>
+                    <div>
+                        <label class="principal">Pratica alguma atividade física?</label>
+                        <label>Sim</label>
+                        <input type="checkbox" id="sim">
+                        <label>Não</label>
+                        <input type="checkbox" id="nao">
+                    </div>
+                    <div>
+                        <label class="principal">Qual atividade?</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label class="principal">Quantas vezes na semana?</label>
+                        <label>1x</label>
+                        <input type="checkbox">
+                        <label>2x</label>
+                        <input type="checkbox">
+                        <label>3x ou mais</label>
+                        <input type="checkbox">
+                    </div>
+                    <div>
+                        <label class="principal">Fumante?</label>
+                        <label>Sim</label>
+                        <input type="checkbox">
+                        <label>Não</label>
+                        <input type="checkbox">
+                    </div>
+                    <div>
+                        <label class="principal">Problemas na coluna?</label>
+                        <label>Sim</label>
+                        <input type="checkbox">
+                        <label>Não</label>
+                        <input type="checkbox">
+                    </div>
+                    <div>
+                        <label class="principal">Tratamento Ósseo</label>
+                        <label>Sim</label>
+                        <input type="checkbox">
+                        <label>Não</label>
+                        <input type="checkbox">
+                    </div>
+    
+                </div>
+                <div class="composicaoCorporal">
+                    <h1>Composição Corporal</h1>
+                    <div>
+                        <label>Peso(kg)</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label>Altura(cm)</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label>Percentual de gordura</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label>Circurferência Abdominal:</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label>IMC: </label>
+                        <input type="text" disabled>
+                    </div>
+                </div>
+                
+            </form>
+           
+        </section>
     <section>
+    
 </body>
 <script src="./index.js"></script>
 </html>
