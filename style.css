@@ -97,7 +97,7 @@ input:focus{
     display: flex;
 }
 
-a{
+.containerButtons a{
     width: 100%;
     height: 40px;
     border-radius: 5px;
@@ -171,5 +171,21 @@ a{
   width: 150px;
   height: 150px;
   border-radius: 50%;
+}
+
+.aprendizado{
+  width: 270px;
+}
+
+.aprendizado a{
+  font-family: 'Roboto', sans-serif;
+  color: blue;
+  font-weight: bold;
+}
+
+.aprendizado label{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
 }
   

@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fornecedores</title>
+    <title>Avaliação Fisica</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../../assets/favicon.ico" type="image/x-icon">
+    
 </head>
 <body>
     <div class="containerButton">
@@ -52,8 +54,8 @@
                 <div class="informacoesIniciais">
                     <h1>Identificação do Aluno</h1>
                     <div>
-                        <input type="text" placeholder="Nome do Auno">
-                        <input type="text" placeholder="Idade">
+                        <input type="text" placeholder="CPF" onkeypress="return event.charCode >= 48 && event.charCode <= 57" id="cpf" maxlength="14">
+                        <input type="text" placeholder="Idade" id="idade">
                     </div>   
                 </div>
                 <div class="anamneseDoAluno">
@@ -105,31 +107,35 @@
                     <h1>Composição Corporal</h1>
                     <div>
                         <label>Peso(kg)</label>
-                        <input type="text">
+                        <input type="text" id="peso" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
                     </div>
                     <div>
                         <label>Altura(cm)</label>
-                        <input type="text">
+                        <input type="text" id="altura" maxlength="4">
                     </div>
                     <div>
                         <label>Percentual de gordura</label>
-                        <input type="text">
+                        <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
                     </div>
                     <div>
                         <label>Circurferência Abdominal:</label>
-                        <input type="text">
+                        <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
                     </div>
                     <div>
                         <label>IMC: </label>
-                        <input type="text" disabled>
+                        <input type="text" disabled id="imc">
+                    </div>
+                    <div class="buttonEnviar">
+                        <button type="button" id="enviarDados">Enviar dados</button>
                     </div>
                 </div>
                 
             </form>
-           
         </section>
     <section>
     
 </body>
 <script src="./index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 </html>

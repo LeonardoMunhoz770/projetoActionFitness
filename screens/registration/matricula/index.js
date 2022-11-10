@@ -44,7 +44,7 @@ document.querySelector('#btn').addEventListener("click", function(){
     let telefone = document.querySelector('#telefone').value;
     dados['telefone'] = telefone
     let selectGenero = document.querySelector('#genero');
-    let genero = selectGenero.options[selectGenero.selectedIndex].text;
+    let genero = selectGenero.options[select.selectedIndex].text;
     dados['genero'] = genero;
     let cep = document.querySelector('#cep').value;
     dados['cep'] = cep

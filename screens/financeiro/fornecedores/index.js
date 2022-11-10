@@ -87,6 +87,9 @@ const dados = {
 }
 
 document.querySelector("#btn").addEventListener("click",function(){
+    let fisica_juridica = document.querySelector("#fisica_juridica").value;
+    console.log(fisica_juridica)
+    dados["fisica_juridica"] = fisica_juridica
     let razao_social = document.querySelector("#razao_social").value;
     dados['razao_social'] = razao_social;
     let cnpj = document.querySelector("#cnpj").value;
@@ -111,8 +114,7 @@ document.querySelector("#btn").addEventListener("click",function(){
     dados["pais"] = pais
     let cidade = document.querySelector("#cidade").value;
     dados["cidade"] = cidade;
-    let fisica_juridica = document.querySelector("#fisica_juridica").value;
-    dados["fisica_juridica"] = fisica_juridica
+
 
     if(razao_social.length == 0 || cnpj.length == 0 || ie_rg.length == 0 || telefone.length == 0 || e_mail.length == 0 || cep.length == 0 || endereco.length == 0 || numero.length == 0 || bairro.length == 0 || uf.length == 0 || pais.length == 0 || cidade.length == 0 || fisica_juridica.length == 0){
         Swal.fire({
@@ -136,14 +138,15 @@ document.querySelector("#btn").addEventListener("click",function(){
                 'Os dados foram enviados com sucesso!',
                 'success'
             )
+            
         }).catch((error) =>{
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Algo deu errado',
                 footer: `<label>Contate o administrador! ${error}</label>`,
-                timer: 2000
             })
+            
         })
     }
 })
