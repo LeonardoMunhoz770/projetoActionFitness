@@ -116,6 +116,13 @@ document.querySelector("#imprimirDados").addEventListener("click", function(){
             <label>Indicado: ${nomeIndicado}</label><br>
             <label>CPF: ${cpf}</label><br>
             <label>Telefone: ${telefone}</label><br>
+        </div><br>
+
+        <div>
+            <h1>Liberação de acesso ACTION FITNESS</h1><br>
+            <label>O Cliente ${nomeIndicado} está autorizado a acessar as dependências da academia de ginástica Action Fitness na data ____ no periodo de ___ ás ___ <br>
+            A equipe Action deseja uma ótima experiência, seja bem vindo(a)!
+            </label>
         </div>
         
     
