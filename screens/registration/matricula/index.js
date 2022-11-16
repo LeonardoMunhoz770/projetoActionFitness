@@ -134,12 +134,7 @@ function limparQuery(){
 
 
 function imprimirDados() {
-    
-
-
-
-
-    let conteudo = document.querySelector('#dados').innerHTML;
+   let conteudo = document.querySelector('#dados').innerHTML;
    tela_impressao = window.open('Contrato Action Fitness');
    tela_impressao.document.write(conteudo);
    tela_impressao.window.print();

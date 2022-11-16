@@ -1,0 +1,260 @@
+html{
+    height: 100%;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.containerPrincipal{
+    margin: 0 auto;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 50px;
+    border-radius: 5px;
+    flex-direction: column;
+    height: 100%;
+}
+
+.options{
+    height: 50px;
+    width: 100%;
+    width: 250px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    align-items: center;
+}
+
+.options:hover{
+    background: rgb(250,217,97);
+    background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);
+}
+
+.options label{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    padding-left: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.iconOptions{
+    height: 30px;
+    width: 30px;
+    padding: 2px;
+}
+
+
+.containerStart{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 1em gray;
+
+}
+
+a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    padding-left: 5px;
+    width: 100%;
+}
+
+@media(max-width: 1300px){
+    .containerStart{
+        flex-direction: column;
+    }
+}
+
+
+.buttonShow{
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 35px;
+}
+
+.containerButton{
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+.formatacaoMatricula div{
+    width: 50%;
+    height: 500px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: #FAF8ED;
+}
+
+.formatacaoMatricula h3{
+    font-size: 30px;
+}
+
+
+.formatacaoMatricula label{
+    cursor: pointer;
+    display: flex;
+}
+
+@media(max-width: 1000px){
+    .containerStart{
+        display: none;
+    }
+
+}
+
+@media(max-width: 845px){
+    .containerPrincipal{
+        flex-direction: column;
+        align-items: center;
+    }
+    .containerBusca div{
+        width: 100%;
+    }
+}
+  .containerUser{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+
+.containerUser img{
+    height: 50px;
+    width: 50px;
+}
+
+.logof{
+  display: none;
+}
+
+.iconShow{
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+}
+
+.containerOptions a{
+    font-size: 15px;
+}
+
+.containerOptions div{
+    padding: 5px;
+}
+
+.containerOptions{
+    display: none;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    
+}
+
+.containerBusca{
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    display: block;
+    
+}
+
+.containerBusca .div, .aluno{
+    width: 70%;
+    height: 100%; 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.containerBusca .input{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+.containerBusca .button{
+    background-color: #C3C3C3;
+    border: none;
+    cursor: pointer;
+    width: 120px;
+    background: rgb(250,217,97);
+    background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);
+}
+
+.containerIndicacao{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 500px;
+    flex-direction: column;
+}
+
+.containerIndicacao form{
+    height: 450px;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.containerIndicacao form input{
+    width: 80%;
+    height: 70px;
+    border: none;
+    border: 1px solid black;
+}
+
+.containerIndicacao form label{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.buttonImprimir{
+    width: 20%;
+    height: 50px;
+    background: rgb(250,217,97);
+    background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);
+    border: none;
+    cursor: pointer;
+}
+
+.imprimir{
+    display: none;
+}

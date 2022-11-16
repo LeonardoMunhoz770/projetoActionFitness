@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indicações</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../../../assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="containerButton">
+        <img id="showButton" class="buttonShow" src="../../../assets/showIcon.jfif ">
+        <div class="containerUser">
+            <label id="user"></label>
+            <img src="../../../assets/iconUser.png" id="imageLogin">
+        </div>
+        <div class="logof">
+            <a href="../../../index.html">Sair</a>
+        </div>
+    </div>
+    <section class="containerPrincipal">
+        <div class="containerStart">
+            <div class="options"  >
+                <img src="../../../assets/icon-registration.png" class="iconOptions"/>
+                <a href="../../registration/matricula/index.html" for="client">Matricula</a>
+            </div>
+            <div class="options">
+                <img src="../../../assets/icon-sell.png" class="iconOptions"/>
+                <a href="../../plans/index.html" for="client">Planos</a>
+            </div>
+            <div>
+                <div class="options" >
+                    <img src="../../../assets/icon-financial.png" class="iconOptions"/>
+                    <a href="../../financeiro/contasReceber/index.html">Financeiro</a>
+                    <img src="../../../assets/icon_show.png" class="iconShow" id="showOptions"/>
+                </div>
+                <div class="containerOptions"> 
+                    <div><a href="../cancelamento/index.html">Cancelamento</a><br></div>
+                    <div><a href="../contasReceber/index.html">Contas á Receber</a></div>
+                </div>
+            </div>
+            
+            
+            <div class="options" style="background: rgb(250,217,97); background: linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(255,179,0,1) 100%);">
+                <img src="../../../assets/icon-administration.png" class="iconOptions"/>
+                <a href="../../administrativo/index.html" for="client">Administrativo</a>
+            </div>
+            <div class="options">
+                <img src="../../../assets/icon-client.png" class="iconOptions"/>
+                <label for="client">Área do Cliente</label>
+            </div>
+            
+        </div>
+        <div class="containerBusca" id="containerBusca">
+            <div class="div">
+                <input placeholder="Digite o CPF do aluno" maxlength="14" id="cpf"onkeypress="return event.charCode >= 48 && event.charCode <= 57"  autocomplete="off" class="input">
+                <button type="button" class="button" id="pesquisar">
+                    <span class="button__text">Localizar Aluno</span>
+                </button>
+            </div>
+            <div id="matricula" class="aluno">
+        </div>
+        <div class="containerIndicacao">
+            <form>
+                <label>Indicado por: </label>
+                <input type="text" disabled id="indicado"/>
+                <label>Nome do Indicado: </label>
+                <input type="text" placeholder="Nome" id="nomeIndicado">
+                <label>CPF:</label>
+                <input placeholder="Digite o CPF do aluno" maxlength="14" id="cpfIndicado" onkeypress="return event.charCode >= 48 && event.charCode <= 57"  autocomplete="off">
+                <label>Telefone</label>
+                <input type="text" placeholder="Telefone" id="telefone">
+                <button class="buttonImprimir" type="button" id="imprimirDados">Imprimir</button>
+            </form>
+        </div>
+        <div id="imprimir" class="imprimir">
+
+
+        </div>
+    <section>
+        
+</body>
+<script src="./index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</html>
