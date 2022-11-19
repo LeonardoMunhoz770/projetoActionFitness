@@ -30,9 +30,8 @@ document.querySelector('#btn').addEventListener("click", function(){
     let select = document.querySelector("#tipoPlano"); 
     let plano = select.options[select.selectedIndex].text;
     dados['plan'] = plano;
-    let selectMatricula = document.querySelector('#vigencia');
-    let vigencia = selectMatricula.options[select.selectedIndex].text;
-    dados['vigencia'] = vigencia;
+    let selectMatricula = document.querySelector('#vigencia').value;;
+    dados['vigencia'] = selectMatricula;
     let data = document.querySelector("#vencimento").value;
     dados['data'] = data;
     let cpf = document.querySelector('#cpf').value;
@@ -43,9 +42,8 @@ document.querySelector('#btn').addEventListener("click", function(){
     dados['nasc'] = nasc
     let telefone = document.querySelector('#telefone').value;
     dados['telefone'] = telefone
-    let selectGenero = document.querySelector('#genero');
-    let genero = selectGenero.options[select.selectedIndex].text;
-    dados['genero'] = genero;
+    let selectGenero = document.querySelector('#genero').value;
+    dados['genero'] = selectGenero;
     let cep = document.querySelector('#cep').value;
     dados['cep'] = cep
     let endereco = document.querySelector('#endereco').value;
@@ -76,7 +74,7 @@ document.querySelector('#btn').addEventListener("click", function(){
                 <label>CPF: ${dados.cpf}</label><br>
                 <label>Gênero: ${dados.genero}</label><br>
                 <label>Telefone: ${dados.telefone}</label><br>
-                <label>Data de Nascimento: ${dados.nasc}</label>
+                <label>Data de Nascimento: ${dados.nasc}</label><br>
                 <label>E-mail:${email} </label>
             </div>
             <div>
@@ -106,13 +104,24 @@ document.querySelector('#btn').addEventListener("click", function(){
         },
         body: JSON.stringify(dados)
     })
-    .then(
-        Swal.fire(
-            'Bom trabalho!',
-            'Os dados foram enviados com sucesso!',
-            'success'
-        )
-    )
+    .then(response => response.json())
+    .then(response =>{
+        if(response.mensagen == "Erro: matricula já existe"){
+            Swal.fire({
+                icon: "error",
+                title: 'Oops...',
+                text: `${response.mensagen}`,
+                timer:2000
+            })
+        }if(response.mensagen == "criado com sucesso"){
+            Swal.fire({
+                icon: "success",
+                title: 'Oops...',
+                text: `${response.mensagen}`,
+                timer:2000
+            })
+        }
+    })
     .catch(res =>{
         Swal.fire({
             icon: 'error',

@@ -132,14 +132,27 @@ document.querySelector("#btn").addEventListener("click",function(){
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(dados)
-        }).then(() =>{
-            Swal.fire(
-                'Bom trabalho!',
-                'Os dados foram enviados com sucesso!',
-                'success'
-            )
-            
-        }).catch((error) =>{
+        }).then((response) =>{
+            if(response.menssagen == "Fornecedor já existe"){
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: `${response.menssagen}`,
+                    timer: 2000
+                })
+            }if(response.menssagen == "Fornecedor cadastrado"){
+                Swal.fire({
+                    icon: "success",
+                    title: 'Oops...',
+                    text: `${response.menssagen}`,
+                    timer:2000
+                })
+            }
+        })
+        
+        
+        
+        .catch((error) =>{
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
