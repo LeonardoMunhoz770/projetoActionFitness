@@ -48,10 +48,10 @@ document.querySelector('#showOptions').addEventListener('click', function(){
         valor = valor + '';
         valor = parseInt(valor.replace(/[\D]+/g, ''));
         valor = valor + '';
-        valor = valor.replace(/([0-9]{1})$/g, ",$1");
+        valor = valor.replace(/([0-9]{1})$/g, ".$1");
 
         if (valor.length > 6) {
-            valor = valor.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+            valor = valor.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1.$2");
         }
 
         elemento.value = valor;
@@ -79,18 +79,20 @@ document.querySelector('#enviarDados').addEventListener("click", function(){
     }else{
         dados['Plano'] = plano
         dados['Valor'] = valorPlano
-        fetch('http://127.0.0.1/AlterarPlanos', {
+        fetch('http://127.0.0.1:3000/alterarPlano', {
             method: 'PUT',
             headers:{
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(dados)
-        }).then((response) =>{
+
+        }).then(response => response.json())
+        .then((response) =>{
             Swal.fire({
                 icon: "success",
                 title: 'Bom trabalho',
-                text: `${response}`,
+                text: `${response.menssagem}`,
                 timer:2000
             })
         })

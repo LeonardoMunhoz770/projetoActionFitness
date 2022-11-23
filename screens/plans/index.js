@@ -40,3 +40,23 @@ document.querySelector("#imageLogin").addEventListener('click', function(){
         
     }
 })
+
+
+fetch("http://127.0.0.1:3000/plano", {
+    method: 'GET',
+    headers:{
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    }
+}).then(response => response.json())
+.then(response =>{
+    console.log(response)
+    document.querySelector("#plano_basico_valor").innerHTML += response.dados[0].planos[0].valor
+    document.querySelector("#plano_completo_valor").innerHTML += response.dados[0].planos[1].valor
+    document.querySelector("#plano_familiar_basico_valor").innerHTML += response.dados[0].planos[4].valor
+    document.querySelector("#plano_familiar_completo_valor").innerHTML += response.dados[0].planos[3].valor
+    document.querySelector("#plano_especializado_valor").innerHTML += response.dados[0].planos[2].valor
+})
+
+
+

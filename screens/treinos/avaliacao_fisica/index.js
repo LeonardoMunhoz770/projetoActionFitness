@@ -104,6 +104,13 @@ document.querySelector("#enviarDados").addEventListener("click", function(){
                 footer: `<label>Contate o administrador! ${error}</label>`,
                 timer: 2000
             })
+        }).finally(() =>{
+            Swal.fire(
+                'Bom trabalho!',
+                'Os dados foram enviados com sucesso!',
+                'success'
+            )
+            location.reload()
         })
     }
     
