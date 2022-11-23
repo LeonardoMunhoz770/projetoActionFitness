@@ -35,7 +35,7 @@ document.querySelector("#pesquisar").addEventListener('click', function(){
             timer: 2000
         })
     }else{
-        fetch('http://localhost:3000/buscarMatricula',{
+        fetch('http://localhost:3000/buscarConta',{
         method: 'POST',
         headers:{
             'Content-Type': 'application/json'        
@@ -45,7 +45,7 @@ document.querySelector("#pesquisar").addEventListener('click', function(){
         })
         }).then(response => response.json())
             .then((response) =>{
-                if(response.userValid == false){
+                if(response.menssagem == "cliente não existe"){
                     Swal.fire({
                         icon: 'error',
                         title: 'Oops...',
@@ -53,19 +53,38 @@ document.querySelector("#pesquisar").addEventListener('click', function(){
                         timer: 2000
                     })
                 }else{
-                    document.querySelector("#Aluno").value = response.nome
-                    document.querySelector("#Plano").value = response.tipoPlano
+                    document.querySelector("#Aluno").value = response.nomeConta
+                    document.querySelector("#Plano").value = response.nomePlano
                     document.querySelector("#Status").value = 'Ativo'
+                    let data = new Date();
+                    let dia = String(data.getDate()).padStart(2, '0');
+                    let mes = String(data.getMonth() + 1).padStart(2, '0');
+                    let ano = data.getFullYear();
+                    let dataAtual = dia + '/' + mes + '/' + ano;
+                    let table = document.querySelector("#historico")
+                    for(i = 1; i < table.rows.length; i++){
+                        table.rows[i].cells[0].innerHTML = response.vigencia
+                        table.rows[i].cells[1].innerHTML = response.valor
+                        table.rows[i].cells[3].innerHTML = dataAtual
+                        table.rows[i].cells[4].innerHTML = Math.floor(Math.random() * 500)
+                    }
+                    table.rows[1].cells[2].innerHTML = response.dataV1
+                    table.rows[2].cells[2].innerHTML = response.dataV2
+                    table.rows[3].cells[2].innerHTML = response.dataV3
+                    table.rows[4].cells[2].innerHTML = response.dataV4
+                    table.rows[5].cells[2].innerHTML = response.dataV5
+                    table.rows[6].cells[2].innerHTML = response.dataV6
+                    table.rows[7].cells[2].innerHTML = response.dataV7
+                    table.rows[8].cells[2].innerHTML = response.dataV8
+                    table.rows[9].cells[2].innerHTML = response.dataV9
+                    table.rows[10].cells[2].innerHTML = response.dataV10
+                    table.rows[11].cells[2].innerHTML = response.dataV11
+                    table.rows[12].cells[2].innerHTML = response.dataV12
+                    console.log(response.valor)
                 }
                 
             }).catch((error) =>{
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Algo deu errado',
-                    footer: `<label>Contate o administrador! ${error}</label>`,
-                    timer: 2000
-                })
+                console.log(error)
          })       
     }
     

@@ -116,7 +116,7 @@ document.querySelector('#btn').addEventListener("click", function(){
         }if(response.mensagen == "criado com sucesso"){
             Swal.fire({
                 icon: "success",
-                title: 'Oops...',
+                title: 'Bom trabalho',
                 text: `${response.mensagen}`,
                 timer:2000
             })
